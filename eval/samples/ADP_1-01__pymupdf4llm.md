@@ -1,0 +1,1289 @@
+# **ADP 1-01** DOCTRINE PRIMER 
+
+
+
+**JULY 2019 DISTRIBUTION RESTRICTION:** Approved for public release; distribution is unlimited. This publication supersedes ADP 1-01, dated 2 September 2014. **HEADQUARTERS, DEPARTMENT OF THE ARMY** 
+
+This publication is available at the Army Publishing Directorate site <u>(https://armypubs.army.mil/) and the Central Army Registry site (https://atiam.train.army.mil/catalog/dashboard).</u> 
+
+***ADP 1-01** 
+
+Army Doctrine Publication No. 1-01 
+
+Headquarters Department of the Army Washington, DC, 31 July 2019 
+
+## **DOCTRINE PRIMER** 
+
+### **Contents** 
+
+||**Page**|
+|---|---|
+||**PREFACE.................................................................................................................... iii**|
+||**INTRODUCTION .......................................................................................................... v**|
+|**Chapter 1**|**DOCTRINE AND ITS ROLE ..................................................................................... 1-1**|
+||Professional Knowledge and Doctrine ...................................................................... 1-1|
+||Meaning and Sources of Doctrine ............................................................................. 1-1|
+||The Role of Doctrine .................................................................................................. 1-2|
+|**Chapter 2**|**DOCTRINE IN CONTEXT ......................................................................................... 2-1**|
+||The Structure of Doctrine .......................................................................................... 2-1|
+||Elements of Information ............................................................................................. 2-1|
+||General Types of Doctrine......................................................................................... 2-3|
+||Types of Army Doctrine and Their Hierarchy ............................................................ 2-3|
+||Concepts and Doctrine .............................................................................................. 2-4|
+|**Chapter 3**|**FOUNDATIONS OF DOCTRINE .............................................................................. 3-1**|
+||Our Vision of War—The Nature of Operations .......................................................... 3-1|
+||The Foundations of Army Doctrine ............................................................................ 3-2|
+|**Chapter 4**|**TAXONOMIES AND TERMS OF ARMY DOCTRINE .............................................. 4-1**|
+||Doctrine Framework .................................................................................................. 4-1<br>|
+||Terms to Describe Organizations and Branches ...................................................... 4-1<br>|
+||Terms to Describe an Operational Environment ....................................................... 4-2<br>|
+||Terms and Taxonomies for the Conduct of Operations ............................................ 4-4|
+||The Difference Between Operations and Warfighting Functions .............................. 4-8|
+|**Chapter 5**|**APPLICATION OF DOCTRINE ................................................................................ 5-1**|
+||The Relationships ...................................................................................................... 5-1|
+||Planning ..................................................................................................................... 5-2|
+||**SOURCE NOTES ................................................................................ Source Notes-1**|
+||**GLOSSARY ................................................................................................ Glossary-1**|
+||**REFERENCES ........................................................................................ References-1**|
+
+
+
+**DISTRIBUTION RESTRICTION** : Approved for public release; distribution is unlimited. 
+
+*This publication supersedes ADP 1-01, dated 2 September 2014. 
+
+**i** 
+
+**Contents** 
+
+### **Figures** 
+
+|Introductory figure. Logic chart for doctrine ...................................................................................... vi|
+|---|
+
+
+
+### **Tables** 
+
+|Introductory table. Modified terms ..................................................................................................... v|
+|---|
+
+
+
+**ADP 1-01** 
+
+**31 July 2019** 
+
+**ii** 
+
+### **Preface** 
+
+ADP 1-01 guides Army professionals (both Soldiers and Department of the Army Civilians) in their understanding of the entire body of professional knowledge and beliefs that shape the art and science of their profession. It addresses what doctrine is, why it is important, and which major ideas underlie it. The publication also discusses the most important taxonomies and terms used in the conduct of operations and the way they fit together as a single coherent whole. The principal audience for the ADP 1-01 is all members of the Army Profession. 
+
+Commanders, staffs, and subordinates ensure that their decisions and actions comply with applicable United States, international, and in some cases host-nation laws and regulations. Commanders at all levels ensure that their Soldiers operate in accordance with the law of war and the rules of engagement. (See FM 27-10.) 
+
+ADP 1-01 uses joint terms where applicable. Selected joint and Army terms and definitions appear in both the glossary and the text. Terms for which ADP 1-01 is the proponent publication (the authority) are marked with an asterisk (*) in the glossary. When first defined in the text, terms for which ADP 1-01 is the proponent publication are boldfaced and italicized, and definitions are boldfaced. When first defining other proponent definitions in the text, the term is italicized and the number of the proponent publication follows the definition. The following uses of the term are not italicized. Underlined words show only emphasis, not formal terms. 
+
+ADP 1-01 applies to the Active Army, Army National Guard/Army National Guard of the United States, and United States Army Reserve unless otherwise stated. 
+
+The proponent of ADP 1-01 is the United States Army Combined Arms Center. The preparing agency is the Combined Arms Doctrine Directorate, United States Army Combined Arms Center. Send comments and recommendations on DA Form 2028 ( _Recommended Changes to Publications and Blank Forms_ ) to Commander, United States Army Combined Arms Center and Fort Leavenworth, ATTN: ATZL-MCD (ADP 1-01), 300 McPherson Avenue, Fort Leavenworth, KS 66027-2337; by e-mail to <u>usarmy.leavenworth.mccoe.mbx.cadd-org-mailbox@mail.mil; or submit an electronic DA Form 2028.</u> 
+
+**31 July 2019** 
+
+**ADP 1-01** 
+
+**iii** 
+
+### **Acknowledgments** 
+
+The copyright owners listed here have granted permission to reproduce material from their works. 
+
+- “Military Science in an Age of Peace” by Michael Howard. Copyright © 1974 _RUSI Journal_ , reprinted by permission of Taylor & Francis Ltd. (http://www.tandfonline.com) on behalf of RUSI Journal. 
+
+- © Jim Storr, 2009, _The Human Face of War_ , Bloomsbury Continuum Publishing, an imprint of Bloomsbury Publishing Plc. 
+
+- Definition courtesy Merriam-Webster Online Dictionary copyright © 2015 by Merriam-Webster, Incorporated. 
+
+- _The Liddell Hart Memoirs,_ Volume 1 by Basil Liddell Hart. Copyright © 1965 by Cassell and Company, LTD. Owned by the Orion Publishing Group. 
+
+**ADP 1-01** 
+
+**31 July 2019** 
+
+**iv** 
+
+### **Introduction** 
+
+Doctrine is dynamic and changing. It is based on lessons learned in current operations and training, from adaptive enemies, and after changes in force structure, technology, and social values. This publication provides the basic information necessary to understand Army doctrine and the ways it changes. It clarifies why various constructs exist and how they all fit together. It is a guide for professionals about the language of the profession. 
+
+Starting with Baron von Steuben’s _Regulations for the Order and Discipline of the Troops of the United States_ , doctrine in various forms has guided the Army through peacetime and war. Lessons learned from world wars and other operations shaped and codified how Army forces operated. ( _Army forces_ refers to Army organizations whose role is to conduct operations in the field. _The Army_ refers to the Army as an institution.) In the early 1900s, Army doctrine consisted of fewer than 40 field service regulations and drill manuals. Gradually, doctrine grew to over 500 field manuals. Although they provided tactics and procedures, these publications lacked a clear hierarchy that served to both categorize and prioritize information. Leaders sometimes struggled to determine what was truly important for all professionals and what was important only to a branch or functional area. Additionally, as doctrine evolved, it saw a prolific growth of terms and expressions used. This growth sometimes obscured the relationship of terms and expressions such that Soldiers and their leaders did not clearly understand them. 
+
+The Army transition required a re-examination of Army doctrine. This transition moved the Army’s focus more on readiness for large-scale combat against peer threats since 2015 and the 2018 National Defense Strategy, which had been heavily influenced by operations of the past 20 years. The 2017 version of FM 3-0 subsequently drove revisions to doctrine across all warfighting functions to ensure doctrinal publications adequately addressed both large-scale ground combat operations and those elements of the multi-domain operations future concept that could be implemented with the Army’s currently fielded capabilities. As part of the effort, the Army decided to combine Army doctrine publications (known as ADPs) with their associated Army doctrine reference publications (known as ADRPs) to reduce redundancy. The Army continues to revise field manuals (known as FMs) and Army techniques publications (known as ATPs), as appropriate. These revisions make publications relevant to near-term operational environments and ensure Army doctrine is balanced to support Army forces conducting operations across the competition continuum and the range of military operations. 
+
+Leaders and Soldiers must understand what Army doctrine is, what its purpose is, how it is organized, and why its information is important. The precursor to this understanding is a definitive text on the _why_ of Army doctrine—a doctrine primer. The doctrine primer becomes the standard for evaluating future doctrine; it allows the Army to discipline the establishment of terms and the categorization of operational knowledge. 
+
+Chapter 1 first looks at what doctrine is and why it is important. Chapter 2 examines the doctrine landscape— the structure of doctrine, types of doctrine, the relationship of doctrine to concepts and lessons learned, and reasons for doctrine changes. Chapter 3 looks at the foundations of doctrine. Chapter 4 examines the terms and taxonomies of current doctrine. Finally, chapter 5 examines how the taxonomies work together to facilitate the conduct of operations. The introductory figure on page vi illustrates the logic associated with doctrine. The introductory table addresses modified terms. 
+
+###### **Introductory table. Modified terms** 
+
+|**_Term_**|**_Reason_**|
+|---|---|
+|Armydoctrine|Modifies the definition.|
+|function|Armydefinition no longer used. Adoptsjoint definition.|
+|jointprinciples of operations|Definition no longer used.|
+|operational variable|Modifies the definition.|
+
+
+
+**31 July 2019** 
+
+**ADP 1-01** 
+
+**v** 
+
+**Introduction** 
+
+###### **Introductory table. Modified terms (continued)** 
+
+|**_Term_**|**_Reason_**|
+|---|---|
+|principle|Modifies the definition.|
+|principles of operations|Adds new term.|
+
+
+
+
+
+<!-- Start of picture text -->
+principles of operations  Adds new term.<br><!-- End of picture text -->
+
+**Introductory figure. Logic chart for doctrine** 
+
+**ADP 1-01** 
+
+**31 July 2019** 
+
+**vi** 
+
+##### **Chapter 1** 
+
+### **Doctrine and Its Role** 
+
+_The central idea of an army is known as its doctrine, which to be sound must be based on the principles of war, and which to be effective must be elastic enough to admit of mutation in accordance with change in circumstances. In its ultimate relationship to the human understanding this central idea or doctrine is nothing else than common sense—that is, action adapted to circumstances._ 
+
+J. F. C. Fuller _The Foundations of the Science of War_ 
+
+#### **PROFESSIONAL KNOWLEDGE AND DOCTRINE** 
+
+1-1. Every profession develops a unique body of knowledge. For the Army Profession, this body of professional knowledge is doctrine. United States (U.S.) Army doctrine is about the conduct of operations by Army forces in the field (and to a limited extent the guidelines for training for operations). Doctrine is the body of professional knowledge that guides how Soldiers perform tasks related to the Army’s role: the employment of landpower in a distinctly American context. Doctrine establishes the language of the profession. Just as physicians must remain proficient and current regarding the body of medical knowledge, Army professionals must remain proficient and current in doctrine. The lives of the men and women who make up the Army—not to mention the security of the Nation—rely on all leaders and Soldiers to be proficient in the Army’s body of professional knowledge: doctrine. 
+
+1-2. Doctrine fits into a larger body of Army knowledge. Each organization develops specific ways to do things—policies about the conduct of its tasks. Large, complex organizations often require more than one body of knowledge to address the variety of tasks they perform. The Army is such an organization. Some policies are prescriptive and include penalties for failure to follow a procedure while others are simply accepted, descriptive ways to do things. Some organizations call these operating procedures, rulebooks, or some other term for organizational guidelines. For the Army, this larger body of knowledge includes, but is not limited, to the following: 
+
+- Army regulations and pamphlets, which address the administration of the Army. 
+
+- Doctrine, which addresses the conduct of operations. 
+
+- Training publications, which address specific training tasks and procedures. 
+
+- Technical manuals, which address specific equipment-related topics. 
+
+Go to the Army Publishing Directorate Website (https://armypubs.army.mil/) and click on the _Publications_ link to access to this body of knowledge. 
+
+1-3. The Army approaches solutions to problems through changes to broad categories of doctrine, organization, training, materiel, leadership and education, personnel, and facilities (DOTMLPF). Doctrine is usually the first approach taken as it is often the easiest and quickest to change and can dramatically impact the conduct of operations. In some cases, the impact of changes in the other factors cannot be fully realized without a significant change in doctrine. Doctrine can also serve as the basis for changes in the other DOTMLPF categories. 
+
+#### **MEANING AND SOURCES OF DOCTRINE** 
+
+1-4. The word _doctrine_ , from Latin _doctrina_ , generally means the body of teachings presented to a group for acceptance. For hundreds of years, people have used the word doctrine to refer to religious scripture and supporting documents, as well as any set of guidelines used in various professions. 
+
+**31 July 2019** 
+
+**ADP 1-01** 
+
+**1-1** 
+
+**Chapter 1** 
+
+1-5. Many casual characterizations of doctrine exist (“the opinion of the senior officer present” or “what 51 percent of the force does”). The joint doctrine community defines _joint doctrine_ as fundamental principles that guide the employment of United States military forces in coordinated action toward a common objective and may include terms, tactics, techniques, and procedures (CJCSI 5120.02D). For the Army we define **_Army doctrine_ as fundamental principles, with supporting tactics, techniques, procedures, and terms and symbols, used for the conduct of operations and as a guide for actions of operating forces, and elements of the institutional force that directly support operations in support of national objectives.** It is authoritative but requires judgment in application. Army doctrine is the approved (by the Secretary of the Army through the Administrative Assistant to the Secretary of the Army) body of knowledge that is taught and used for the conduct of operations. 
+
+1-6. Doctrine is not established arbitrarily, nor is it static. The first source of doctrine comes from decades and often centuries of experience. Local procedures, best practices, and lessons learned from operations and training often gain widespread acceptance because of their applicability over time in varying circumstances. The Army incorporates the best of these ideas into doctrine. This organizational learning allows doctrine to provide a time-tested, coherent body of knowledge that remains relevant and easily understood. This knowledge provides the force with a philosophical framework for thinking about and conducting operations as well as specific tactics, techniques, and procedures (TTP). While grounded in enduring principles, doctrine is also flexible, adaptable, and changing. 
+
+1-7. Another source of doctrine is concepts. Concepts are ideas for a significant change based on proposed new approaches to the conduct of operations or technology. They become part of the Army’s institutional processes for incorporating change into operations. (See paragraph 4-19 and chapter 5.) These ideas propose significantly different methods the force might use in the future, usually 5 to 15 years hence. The Army evaluates concepts through a series of tests. Over time, the Army discards some concepts and keeps others. Those concepts deemed to meet operational needs become validated concepts. The Army incorporates validated concepts into DOTMLPF solutions, often in doctrine. Leaders and Soldiers should avoid confusing concepts with doctrine. Concepts are proposals and the basis for experiments on conducting future operations whereas doctrine addresses how Army forces actually operate today. 
+
+1-8. Army professionals use doctrine in two contexts: study and reflection as well as conducting (planning preparing, executing, and assessing) operations. Thus, doctrine is—and must be—both theoretical and practical. Doctrine is not a catalogue of answers to specific problems. Rather, it is a collection of fundamentals, TTP for thinking about military problems, which operations are the most complex, and what actions best solve them. Doctrine is not what to think or how to solve specific problems. 
+
+#### **THE ROLE OF DOCTRINE** 
+
+1-9. Doctrine serves as a starting point for thinking about and conducting operations. When leaders and Soldiers allow it to fulfill this role, doctrine makes six basic contributions to the conduct of operations and the development of military professionals. Each is vitally and equally important. Each contributes directly to the conduct of operations and mission effectiveness. Doctrine’s contributions— 
+
+- Provide a coherent vision of warfare. 
+
+- Enhance operational effectiveness. 
+
+- Provide a common frame of reference and cultural perspective. 
+
+- Provide a common professional language. 
+
+- Discuss Army contributions to unified action. 
+
+- State and foster desirable traits in leaders and Soldiers. 
+
+1-10. First, doctrine provides a coherent vision of warfare (see chapter 3). It accounts for an army’s understanding of war and reflects its vision of warfare. War is socially sanctioned violence to achieve a political purpose. Warfare is the mechanism, method, or modality of armed conflict against an enemy Warfare is how combatants wage war. All armies have an understanding of war that underlies their visions of warfare. (See JP 1 for a discussion on war and warfare.) These visions directly impact the doctrine these armies develop to conduct operations. Armies that understand war as mechanistic and predictable tend to develop doctrine that attempts to control events to a much greater degree than armies that understand war as a chaotic event beyond precise control. If an army’s vision of warfare includes responsibilities to a civilian 
+
+**1-2** 
+
+**ADP 1-01** 
+
+**31 July 2019** 
+
+**Doctrine and Its Role** 
+
+population in the area of operations, then those responsibilities affect its conduct of operations. The vision of warfare that underlies an army’s doctrine profoundly impacts almost all facets of how that army conducts operations. Strong and effective leaders must understand that vision to make sense of the rest of doctrine. 
+
+1-11. Doctrine is based on an accurate understanding of the nature of war. This vision and understanding enables leaders to cope with the stress and uncertainty brought about by the fog and friction of operations. Doctrine provides leaders and Soldiers with sound practices to account for that friction and assists them in making decisions. By providing time-tested approaches to the conduct of operations, doctrine expands commander’s and staff’s experiences beyond what they have personally experienced to what professional commanders and staffs have encountered and found to be useful for coping with complexity. Sound doctrine helps them sort the important from the inconsequential and the routine from the exceptional. 
+
+1-12. The second contribution, doctrine enhances the operational effectiveness, recognizes that Army forces capture best practices and lessons learned validated from past operations, current operations, and training. Doctrine incorporates or adds best practices and validated lessons learned to doctrinal TTP. Best practices and lessons learned are disseminated along with enduring principles and TTP identified from historical analysis. (See the Center for Army Lessons Learned website for details.) The resulting doctrine captures what has proven useful in the past and provides a set of tools that leaders think will still be valid during current and near future projected operations. Much of doctrine has stood the test of time and results from extensive operational experience by not only Army forces, but also other Services and multinational partners. While doctrine must be applied with judgment, and doctrine cannot account for every circumstance, it is always a good place to start. Creatively applying different combinations of these doctrinal tools—adapted to the specific circumstances—is the true art of tactics and foundation of operational success. For leaders and Soldiers unfamiliar with doctrine, every operation is experiential learning at the basic level. With a vast array of experiences available through studying doctrine, leaders and Soldiers make every operation more than basic learning. 
+
+1-13. Third, doctrine provides the force with a common frame of reference and a common cultural perspective for solving military problems. By providing a common and standardized set of principles, tactics, techniques, procedures, and terms and symbols for the Army, doctrine enables flexibility, supports rapid action and reaction to emerging opportunities and threats, and facilitates swift adaptation during changing circumstances. Commanders and staffs focus their creative efforts on solving the unique problems of assigned missions without having to publish detailed procedures for completing common tasks for every mission. For example, if Soldiers understand that a change in the main effort means that all or most priorities—such as fire support, sustainment support, and so on—also change, then a commander does not have to specify every detail. The commander can assume that subordinate staffs and commanders will act based on a common approach to operations. A common approach enables units to self-synchronize both within the unit and between units. Perhaps the most important example of this common cultural perspective is the mission command approach. If leaders and Soldiers understand and exercise mission command to conduct operations, then commanders can expect subordinates to exercise initiative, and subordinates can expect mission orders, not detailed instructions. As a result, commanders count on more rapid decision making and more flexible adaptation to circumstances than if doctrine requires approval for every change in orders. 
+
+1-14. Doctrine’s fourth contribution provides a common language that allows units to pass a great deal of information quickly and succinctly. If each Soldier understands the specified tasks associated with a zone reconnaissance, then a commander can assign this as a task and not have to specify everything that it entails. If each Soldier knows what to coordinate at a passage of lines, then the order does not have to specify every detail when sending an officer or noncommissioned officer out to coordinate a passage. If every Soldier understands that assignment of an area of operations grants certain flexibility within that area of operations to a command and assigns certain responsibilities to the commander for actions in that area of operations, then assigning boundaries does not require details of what can or cannot be done within the area of operations. This common language should result in clearer, shorter orders, much greater precision in operations, and greater flexibility and speed of operations. 
+
+1-15. Fifth, doctrine discusses Army contributions to unified action. Doctrine provides a systematic body of thought describing how Army forces intend to operate as a member of the joint, multinational, or interagency force. This in turn provides a common body of knowledge for education, training, and coordination with unified action partners. 
+
+**31 July 2019** 
+
+**ADP 1-01** 
+
+**1-3** 
+
+**Chapter 1** 
+
+1-16. The last doctrine contribution is doctrine states and fosters desirable character traits in leaders and Soldiers. Effective doctrine demands initiative, creativity, adaptability, and ethical action. While doctrine should be broad enough and in enough depth to cover various situations, it should also provide the flexibility to deal with unforeseen and evolving situations. 
+
+1-17. While doctrine does not address the workings of the institutional force (which Army regulations and other policy govern) except for those organizations directly supporting the conduct of operations, doctrine does play a role in several Army institutional activities. For example, doctrine provides much of the foundation for professional military education, a tool for assessing organizational designs and a benchmark against which to evaluate concepts. The desirable traits that doctrine fosters (see paragraph 1-16) also apply to the institutional force (both Soldiers and civilians), as does the Army Ethic, as laid out in doctrine. 
+
+**1-4** 
+
+**ADP 1-01** 
+
+**31 July 2019** 
+
+##### **Chapter 2** 
+
+### **Doctrine in Context** 
+
+_I am tempted to declare dogmatically that whatever doctrine the Armed Forces are working on now, they have got it wrong. I am also tempted to declare that it does not matter that they have got it wrong. What matters is their capacity to get it right quickly when the moment arrives._ 
+
+Michael Howard “Military Science in the Age of Peace” 
+
+#### **THE STRUCTURE OF DOCTRINE** 
+
+2-1. To understand doctrine, it is necessary to understand the structure of doctrine. Three taxonomies make up the body of knowledge called doctrine: 
+
+- Elements of information. 
+
+- Types of doctrine. 
+
+- Types of Army doctrine and their hierarchy. 
+
+#### **ELEMENTS OF INFORMATION** 
+
+2-2. Five basic elements of information are included in Army doctrine: 
+
+- Principles. 
+
+- Tactics. 
+
+- Techniques. 
+
+- Procedures. 
+
+- Terms and symbols. 
+
+##### **PRINCIPLES** 
+
+2-3. **A** **_principle_ is a comprehensive and fundamental rule or an assumption of central importance that guides how an organization approaches and thinks about the conduct of operations** . In doctrine, principles can apply to the conduct of operations in general or apply to specific organizations or functions. (See discussion beginning in paragraph 4-4.) An example of a principle that applies to operations is the Principle of War Objective: Direct every military operation towards a clearly defined, decisive, and achievable goal. 
+
+##### **TACTICS** 
+
+2-4. _Tactics_ is the employment and ordered arrangement of forces in relation to each other (CJCSM 5120.01A). They include the ordered arrangement and maneuver of units in relation to each other, the terrain, and the enemy in order to translate potential combat power into decisive results. Tactics vary with terrain and other circumstances; they change frequently as the enemy reacts and friendly forces explore new approaches. Applying tactics usually entails acting under time constraints with incomplete information. Tactics always require judgment in application and often require creative thinking; they are always descriptive, not prescriptive. Employing a tactic may require using and integrating several techniques and procedures. An example of a tactic is a movement to contact organized with a security force—either a covering force or an advance guard—and a main body. 
+
+**31 July 2019** 
+
+**ADP 1-01** 
+
+**2-1** 
+
+**Chapter 2** 
+
+##### **TECHNIQUES** 
+
+2-5. _Techniques_ are non-prescriptive ways or methods used to perform missions, functions, or tasks (CJCSM 5120.01A). Techniques are more specific than tactics and less structured than procedures. Techniques are similar to tactics in that they are descriptive. They are similar to procedures in that they are often described in terms of steps. As with tactics, techniques require judgment in application. Leaders and Soldiers choose specific techniques based on the situation and the precise mission or task. They expect the conditions they encounter to affect the way they perform a given technique. An example of a technique is a bounding overwatch. 
+
+##### **PROCEDURES** 
+
+2-6. _Procedures_ are standard, detailed steps that prescribe how to perform specific tasks (CJCSM 5120.01A). They also include formats for orders, reports, and control measures. Procedures are prescriptive. They consist of a series of steps in a set order that Soldiers complete the same way, at all times, regardless of circumstances or a series of formats that Soldiers must use without variation. An example of a procedure is a 9-line medical evacuation (known as MEDEVAC) message. 
+
+##### **TERMS AND SYMBOLS** 
+
+2-7. Terms and symbols are the language and graphics used on operations. Terms are words defined in doctrinal publications specifically for Army use and codified in ADP 1-02 and the _DOD Dictionary of Military and Associated Terms_ . Symbols are those graphics defined specifically for military use. They are codified in MIL-STD-2525D. Symbols specific to large-scale ground combat operations are contained in ADP 1-02. Terms and symbols provide a common language used to communicate during the conduct of operations. Establishing and using terms and symbols with a common military meaning enhances communication among military professionals in all environments and makes a common understanding of doctrine possible. Terms and symbols are prescriptive. They must be used as defined in ADP 1-02. 
+
+##### **DESCRIPTIVE VERSUS PRESCRIPTIVE** 
+
+2-8. Doctrine clearly distinguishes between descriptive and prescriptive information. Most doctrine is descriptive; it must be applied with judgment. It is not dogma to be applied blindly. It must be adjusted to the circumstances of an operational environment. Techniques and procedures have a clear distinction. Whereas techniques are <u>non-prescriptive ways to complete tasks, procedures are prescriptive ways to</u> complete tasks. In other words, while techniques allow for deviation and adjustment based on circumstance, procedures are to be followed exactly as laid out with no deviation. 
+
+2-9. Sometimes Army forces must apply some aspects of doctrine prescriptively—done without deviation. Prescriptive doctrine derives from the need to— 
+
+- Adhere to the Army Ethic, laws of war, national law, the Uniform Code of Military Justice, and often Army regulations. 
+
+- Precisely use terms, symbols, and the language of the profession to ensure a common understanding. 
+
+- Adhere to control measures to ensure coordination, ensure synchronization, and prevent fratricide. 
+
+- Use report, message, and order formats to ensure information is reported rapidly, accurately, and in a commonly understood manner. 
+
+2-10. The five types of information in Army doctrine represent a set of guidelines or tools that can be combined in an almost infinite set of combinations to accomplish missions. Using the same approach or the same set of tools consistently often makes operations predictable, providing an enemy with valuable insights into methods to defeat a particular approach. The application of doctrine requires creative thinking. Doctrine is much more about knowing how to think about the conduct of operations than it is about what to think. Doctrine is a starting point for determining how to accomplish missions and how to adjust and react to changing circumstances. Applied blindly, it becomes a straightjacket. Applied with judgment, it allows commanders and staffs to take advantage of the collected wisdom of the profession. 
+
+**2-2** 
+
+**ADP 1-01** 
+
+**31 July 2019** 
+
+**Doctrine in Context** 
+
+#### **GENERAL TYPES OF DOCTRINE** 
+
+- 2-11. The Army recognizes four general types of doctrine: 
+
+   - Joint doctrine. 
+
+   - Multinational doctrine. 
+
+   - Multi-Service doctrine. 
+
+   - Service doctrine. 
+
+2-12. Army doctrine exists within a larger set of doctrine publications. In theory, this is also a hierarchy in which the higher-level doctrine should drive the lower-level doctrine. Lower-level doctrine should in turn be consistent with the higher-level doctrine. However, there are exceptions. Sometimes lower-level doctrine drives higher-level doctrine. The delineations beginning in paragraph 2-13 are listed roughly in hierarchical order, highest to lowest (although joint and multinational doctrine are often co-equal in the hierarchy). 
+
+2-13. _Joint doctrine_ is fundamental principles that guide the employment of United States military forces in coordinated action toward a common objective and may include terms, tactics, techniques, and procedures (CJCSI 5120.02D). By Federal law, the Chairman of the Joint Chiefs of Staffs is responsible for developing doctrine for the joint employment of the armed forces. Joint doctrine broadly covers the strategic and operational levels of war and is (only by exception) tactical in nature. U.S. joint doctrine provides the overarching joint context for multi-Service doctrine. 
+
+2-14. _Multinational doctrine_ is the agreed upon fundamental principles that guide the employment of forces of two or more nations in coordinated action toward a common objective (JP 3-16). The North Atlantic Treaty Organization (NATO) is the only organization that writes true multinational doctrine and largely fills the same niche as U.S. joint doctrine. When operating in a NATO context, U.S. forces follow NATO doctrine. 
+
+2-15. Multi-Service doctrine contains principles, terms, TTP used and approved by the forces of two or more Services. It performs a common military function consistent with approved joint doctrine. A publication containing this doctrine is called a _multi-Service publication_ —a publication containing principles, terms, tactics, techniques, and procedures used and approved by the forces of two or more Services to perform a common military function consistent with approved joint doctrine (CJCSM 5120.01A). Multi-Service publications are treated as Service doctrine. A multi-Service publication has a Service doctrine publication number on it for each Service that has agreed to it. 
+
+2-16. **_Service doctrine_ is those publications approved by a single Service for use within that Service** . This doctrine provides fundamental principles that guide the employment of Service forces in coordinated action toward a common objective and may include (as Army doctrine does) TTP, terms, and symbols. Each Service publishes its own doctrine publications under various nomenclatures. Paragraphs 2-18 through 2-25 discuss types of Army doctrine. 
+
+2-17. Army doctrine follows joint doctrine to a large extent. Some variation exists as each domain (land, air, maritime, space, and cyberspace) has different requirements for some doctrine constructs and terms. As a rule, Army forces must use terms and control measures to issue orders from joint headquarters to Army echelons exactly as stated in joint publications (these terms and control measures are prescriptive). Beyond that, Army doctrine mirrors joint doctrine wherever possible to facilitate interoperability and common understanding. When joint terms and constructs are not adequate for large-scale ground combat, Army doctrine will vary, but only enough to account for the unique nature of large-scale ground combat. When it does vary, Army doctrine points out that it varies and why. When an Army echelon acts as a joint headquarters, it implements joint doctrine if available. Army doctrine does not repeat joint doctrine but refers to the appropriate joint publication for details. 
+
+#### **TYPES OF ARMY DOCTRINE AND THEIR HIERARCHY** 
+
+2-18. From 1939 to 1999, all Army doctrine was contained in field manuals. Before that, Army doctrine was published in drill manuals and field service regulations (FSRs). For a short time in the 2000s, the Army also used field manuals interim (known as FMIs) and Army tactics, techniques, and procedures (known as ATTPs). Currently all Army doctrine fits into three types of publications, each with a different purpose: 
+
+**31 July 2019** 
+
+**ADP 1-01** 
+
+**2-3** 
+
+**Chapter 2** 
+
+- Army doctrine publications. 
+
+- Field manuals. 
+
+- Army techniques publications. 
+
+2-19. Army doctrine publications (known as ADPs) contain the fundamental principles. Operating forces and elements of the institutional force that directly support operations use these publications to guide their actions in support of national objectives. An Army doctrine publication provides the intellectual underpinnings of how the Army operates as a force. 
+
+2-20. Field manuals (known as FMs) contain principles, tactics, procedures, and other doctrinal information. Army forces use these publications to understand how the Army and its organizations conduct and train for operations. Field manuals describe how the Army executes operations described in the Army doctrine publications. They fully integrate and comply with the doctrine in the Army doctrine publications. 
+
+2-21. Army techniques publications (known as ATPs) contain techniques. Army forces use these publications to accomplish missions, complete functions, and perform specific tasks. Army techniques publications provide Soldiers with ways or methods to accomplish or complete a mission, task, or function. The technique publications provide Soldiers with the flexibility to accomplish or complete a mission, task, or function without prescribing to them on what they must do. These publications fully integrate, nest, and comply with the doctrine contained in Army doctrine publications and field manuals. 
+
+2-22. These publication types form a doctrine hierarchy related to the conduct of operations (the hierarchy does not establish precedence for doctrine over other types of publications such as Army regulations and operator’s manuals). Two capstone publications—ADP 1, _The Army_ , and ADP 3-0, _Operations_ —sit at the top of the doctrine hierarchy. Below these capstone publications are the remaining Army doctrine publications. The next levels down are the field manuals followed by Army techniques publications. The hierarchy establishes which publication Soldiers reference when a conflict exists between publications. In short, Army doctrine publications take precedence over field manuals, which take precedence over Army techniques publications. This precedence only comes into play if a conflict arises between or among publications in different categories. 
+
+**_Note._** Not all higher-level publications have corresponding lower-level publications. Nor does every lower-level publication have a specific higher-level publication under which it falls. 
+
+2-23. The hierarchy makes it easier to determine what a professional needs to know. It allows Soldiers to trace a body of knowledge from general to specific, getting more and more detail about any given topic as one topic progresses from Army doctrine publications to field manuals to specific topics in Army techniques publications. The breakout of principles from TTP makes it easier to change publications incrementally. The top tiers should change less frequently while Army techniques publications can change more rapidly as techniques evolve. 
+
+2-24. Although doctrine as a whole represents the Army’s professional body of knowledge on the conduct of operations, no one is expected to be an expert in all of it. Ideally, Army professionals serve as experts in the doctrine that relates to the Army as a whole as well as in that doctrine that pertains directly to their levels of responsibility, their branch and functional areas, and their assignments. In addition, every officer and noncommissioned officer should know which doctrine publications discuss the conduct of different types of operations and how to access those publications in the event that unforeseen circumstances put them in an operation that differs from their personal experience, training, and education. 
+
+#### **CONCEPTS AND DOCTRINE** 
+
+2-25. Army professional often confuse concepts and doctrine. Concepts are ideas for a significant change. Doctrine is validated principles, TTP, and terms and symbols that the force can apply. The Administrative Assistant to the Secretary of the Army authenticates doctrine. Doctrine focuses on the art of the possible for Army forces currently fielded, trained, and equipped or will be in the immediate, foreseeable future. Doctrine starts from what is already known to work and what has been demonstrated to work beyond current practices (for example, it has been demonstrated to be effective by operations, experiments, training, and so on). The 
+
+**2-4** 
+
+**ADP 1-01** 
+
+**31 July 2019** 
+
+**Doctrine in Context** 
+
+Army builds doctrine from lessons learned and the accumulated knowledge of the profession. Units conducting operations use doctrine, not concepts. 
+
+##### **CONCEPTS** 
+
+2-26. As ideas for a significant change, concepts are based on proposed new approaches to the conduct of operations or technology. These ideas propose how the force might do something significantly different in the future, usually 5 to 15 years hence. Ideally, concepts start with a problem for which the current DOTMLPF solutions either do not work or prove inadequate. Although concepts are not bound by current doctrine or technology, concept developers should start with a clear understanding of what doctrine says on a topic and what technology can reasonably be expected to do. A concept proposes a significantly different way to conduct operations. Each concept then becomes the focus for evaluation to validate or invalidate major changes. When the Army validates a concept, or part of a concept, it may become the driver for a change in any of the DOTMLPF areas. 
+
+2-27. Not all concepts result in a change to current practices, but the validation process is almost as valuable. Knowing what does not work after thorough analysis can prevent a seemingly good idea from becoming an actual problem. Haste in adopting unproven concepts can result in major disruptions that are counterproductive. Pushing concepts into DOTMLPF solutions before vetting them thoroughly often results in wasted resources and can result in failed operations. Failure to adopt validated concepts can lock the Army into less than optimum solutions at best and into ineffective practices at worst. 
+
+##### **CHANGING DOCTRINE** 
+
+2-28. Doctrine has never been static nor should it be. It must change to account for changing circumstances. While some publications have had longer shelf lives than others have, all are subject to change and almost all have been changed over their life span. For example, the Army’s capstone doctrine— _Field Service Regulations Operations_ , FM 100-5 (now obsolete), FM 3-0, and then ADP 3-0—has gone through 22 editions since 1905. The average time between versions is about five years. The shortest time between versions was less than a year on five occasions. The longest time between editions was sixteen years (1923–1939). 
+
+2-29. Doctrine changes when practice changes. Changes in practice are driven by changes in an operational environment. Changes occur for any number of reasons: changing threats, updated technology, redesigned organization, new and more effective ways to perform tasks, and even evolving budget and political decisions. Two broad drivers prompt changes in doctrine; each has a different urgency associated with it. First, a change in the threat and its conduct of warfare demands rapid—often immediate—change. This change can occur in almost any of the DOTLMPF categories but often requires a change in doctrine. Such change ranges from a change in national strategy to a change at the lowest level of techniques. Changing to react to an adaptable enemy is not optional. Second, changes to any of the DOTMLPF categories may be generated internally based on a better way or means to perform tasks. These changes only take place when a new approach shows significant value added over the current solution. The doctrine domain is particularly susceptible to change when a new and more effective way to perform some task becomes evident. These changes often originate as local best practices or lessons learned. Best practices and lessons learned are sometimes (incorrectly) called techniques, but only those that become doctrine (authenticated) are truly techniques. 
+
+2-30. Any change in doctrine should result in changed behavior in operating forces. Any change—no matter how small—takes resources. Not all changes are truly significant, yet they all generate a need to expend resources when adopting the change and eliminating the old behavior. Since an institution only has so much energy to devote to change, worthwhile change must add significant value to the conduct of operations. Change for the sake of change is counter-productive; it wastes valuable resources. Change to respond to a changing environment is mandatory, but changes that reflect small nuances in doctrine, such as renaming existing constructs or adding adjectives to established terms, rarely have much effect and should be avoided. Balancing change with the ability of the force to accommodate it is an art. Every change in doctrine has the following effects on the force: 
+
+**31 July 2019** 
+
+**ADP 1-01** 
+
+**2-5** 
+
+**Chapter 2** 
+
+- The Army must disseminate the change to the force. It often takes one to three years for the force to fully understand a major change. 
+
+- Operating forces must study and adopt the change; the institutional force must change programs of instruction. Everyone must become proficient at the change. 
+
+- Leaders and Soldiers must understand what has been rescinded from doctrine. 
+
+- Finally, it takes time for a change to permeate the force (often up to five years). Until every person (or unit) affected by the change adopts the change, the common operational approach and common language required for effective operations is at risk. 
+
+2-31. Change in doctrine takes both time and other resources. When driven by a change in threat activity, changes in doctrine are necessary. When driven by internal changes to processes, changes in doctrine are optional. Proponents of doctrine must ask if the resources required to implement the change are worth the value added from the change. 
+
+2-32. Doctrine is inherently conservative. Unlike some enterprises that can afford to spend significant resources on a myriad of projects in the hope of a huge payoff (such as venture capitalists), the Army cannot afford to risk lives on speculation. It is difficult to determine the effectiveness of a new idea in the absence of actual operations. Thus, changes to DOTMLPF tend to occur in incremental rather than revolutionary modifications. Often the most important change brought about by a new technology is not the technology itself but the doctrine that applies it. Balancing the technology with the doctrine that implements it is one of the great challenges with doctrine. 
+
+2-33. The different constructs of doctrine—principles, tactics, techniques, and procedures—have different rates of change. True fundamental principles should be time tested and relatively long lasting. Many Army fundamental principles have been derived from centuries of warfare and are grounded in the human nature of war. Tactics also have a long lineage and often reflect relatively unchanging, basic ways to perform specific tasks. While influenced by technology, tactics often use new technology to improve, speed up, or refine the basic approach. In some cases, a new technology or simply an innovation in doctrine significantly alters tactics, even while those changing tactics adhere to the fundamentals. Techniques and procedures, on the other hand, often change rapidly as new ways to perform a specific task, or even entirely new tasks, enter the inventory. 
+
+**2-6** 
+
+**ADP 1-01** 
+
+**31 July 2019** 
+
+##### **Chapter 3** 
+
+### **Foundations of Doctrine** 
+
+_War is not for waging but for winning. Armies do not get paid to come second, not least due to the severe penalties incurred in losing. Useful military theories relate to winning. We want things that work; not merely things that are elegant or intellectually pleasing._ 
+
+Jim Storr _The Human Face of War_ 
+
+#### **OUR VISION OF WAR—THE NATURE OF OPERATIONS** 
+
+3-1. Army doctrine is grounded in a specific view of war and warfare. War is a constant—a violent clash between two or more forces. While the term war has been used within the political area (the war on drugs, war on poverty, economic warfare), it is the use of violence to achieve political purposes that distinguishes war in the military context from other human activities. Such violence between forces on a large scale (as opposed to the criminal use of violence) and the risk that such violence imposes on the military distinguishes war from other human endeavors. This distinction accounts for three elements of the Army’s vision of war: it is inherently chaotic, it is a human endeavor, and it takes place among populations. 
+
+##### **WAR AS INHERENTLY CHAOTIC** 
+
+3-2. War is inherently chaotic. The number of moving parts, the intensive interaction of these parts on each other, and two or more sides actively working to interfere with the functioning of the other side make for a complex, chaotic environment. Orders can be and will be misunderstood, units will take wrong turns, obstacles will appear, and units will consume supplies at unexpected rates. This is the friction that Clausewitz so eloquently captured in _On War_ . This chaotic nature of war makes precise cause-and-effect determinations difficult, impossible, or delayed. The unintended effects of operations often cannot be seen ahead of time and may not be readily apparent in real time. Such chaos imposes a great deal of uncertainty in all operations. This demands an approach to the conduct of operations that does not attempt to impose perfect order on operations but that accepts the chaotic and uncertain nature of operations and makes allowances to account for this unpredictability. Doctrine must not only clearly acknowledge and account for the complexity, chaos, and uncertainty of war, but it must provide a means to use these characteristics to benefit friendly forces and to exploit them for an asymmetric advantage. 
+
+##### **WAR AS A HUMAN ENDEAVOR** 
+
+3-3. War is a human endeavor—a fundamentally human clash of wills. It is not a mechanical process that can be controlled precisely, or even mostly, by machines, statistics, or laws that cover operations of carefully controlled and predictable environments. Fundamentally, all war is about changing human behavior. It is both a contest of wills and a contest of intellect between two or more sides in a conflict, with each trying to alter the behavior of the other side. Success in operations is often determined by a leader’s ability to outthink an opponent. While the bravery and sacrifice of Soldiers is essential to victory, it can rarely overcome poor decisions against a competent, adaptive enemy. The side that forecasts better, adapts more rapidly, thinks more clearly, decides and acts more quickly, and can comfortably operate with uncertainty stands the greatest chance to seize, retain, and exploit the initiative over an opponent. 
+
+3-4. But war is much more than just a contest of wills; it is also the province of fear, passion, camaraderie, heroism, and grief. These emotions, and many others, affect the conduct of war. They affect how and when leaders decide to persevere and when to give up. Doctrine must acknowledge and account for human nature enabling leaders to conduct operations that take full advantage of their capabilities and to predict their enemies’ potential reactions to friendly actions. 
+
+**31 July 2019** 
+
+**ADP 1-01** 
+
+**3-1** 
+
+**Chapter 3** 
+
+##### **WAR AMONG PEOPLE** 
+
+3-5. All war takes place in and among populations, either directly or indirectly. Some fights occur in the midst of large populations who are not combatants. Some operations take place in an environment in which the welfare of the population becomes the responsibility of Army forces. Other operations are designed specifically to influence a friendly, neutral, or enemy population to support or reject specific policies. And finally, some operations aim only to relieve the suffering of populations beset by natural or man-made disasters. 
+
+3-6. For U.S. military forces, war is, or should be, about establishing or re-establishing two conditions. First, conditions favor United States’ interests. Second, conditions enable the population to return to normal peacetime activities however that culture defines those activities. These two conditions apply to most, if not all, operations in which the U.S. Army has been involved. In large-scale conventional operations such as the world wars, small-scale contingencies such as Granada and Panama, or long-term counterinsurgencies such as Vietnam, Iraq, and Afghanistan, the chaos of conflict, the clash of wills, the province of fear, passion, and camaraderie, and the impact on populations and the impact of populations on operations, always exist. They represent the constants that characterize war. 
+
+##### **WARFARE IN DOCTRINE** 
+
+3-7. Warfare is about how war is conducted. While the nature of war is constant, warfare changes constantly. Warfare is affected by changes in international law, technology, organizational structures, operational concepts, public opinion, national policy, and a host of other factors. Warfare may have similarities over time, but it will also have great variations. Doctrine has to account for the constants and then adapt warfare to the prevailing conditions in an operational environment. 
+
+3-8. All these elements directly impact doctrine. The very fact that warfare is a constantly changing human endeavor means that doctrine should not and does not prescribe solutions to problems. It can only provide insights on how to approach solutions. There is a place for checklists for some specific tasks. However, Soldiers do not solve most problems by recourse to checklists and standard solutions. Instead, they solve problems by creatively applying various principles and TTP in unique combinations that address each problem as a distinct situation whose solution can be informed by experience. The unpredictable nature of warfare means Soldiers rarely use fixed solutions and more often use the flexible application of combat power, informed by experience and judgment. Thus, doctrine is a guide to action, not a template for action. 
+
+#### **THE FOUNDATIONS OF ARMY DOCTRINE** 
+
+3-9. The foundations of Army doctrine are a set of basic ideas grounded in the American vision of war and warfare and guided by the Army Ethic, which in turn represents American moral and ethical values. Much of Army doctrine results from the Army Ethic. This professional ethos respects the inherent dignity and worth of all people and minimizes friendly casualties while avoiding harm to noncombatants. The American values (articulated in Army Values and the law of war) guide Army leaders in the conduct of operations. These ideas have guided Army doctrine almost from the inception of the 1905 FSR. Three foundational ideas that have remained part of Army capstone publications from the beginning are the need for combined arms operations, the need for mission command, and the need for adherence to the law of war. A fourth idea—Army operations take place within a context of joint, and now, unified actions partners—is a more recent but central addition of Army doctrine. While the terms in paragraphs 3-10 through 3-13 may not have been used explicitly, the ideas have consistently pervaded Army doctrine. 
+
+##### **COMBINED ARMS OPERATIONS** 
+
+3-10. From the first capstone publication for the Army, 1905 FSR, the concept of combined arms was fully enshrined in doctrine. While the term _combined arms operations_ was not used, the chapters on offense and defense dealt specifically with the use of multiple arms simultaneously. The Army rapidly revised these manuals with four new versions—with multiple changes for each—from 1910 to the post World War I 1923 version. Each new revision included an expanded array of capabilities to include armor, air, and a wireless means of command and control. By the 1914 version, the following sentence was included in the introduction: “Success in war can be achieved only by all branches and arms of the service mutually helping and supporting 
+
+**3-2** 
+
+**ADP 1-01** 
+
+**31 July 2019** 
+
+**Foundations of Doctrine** 
+
+one another in the common effort to attain the desired end.” The 1914 version also had a whole section on “Use of the Combined Arms.” Every capstone manual since then has carried this idea forward. 
+
+##### **MISSION COMMAND** 
+
+3-11. Mission command as the approach to commanding and controlling Army forces is grounded in the Army’s understanding of the nature of warfare. The basic ideas of mission command have been part of every capstone publication since 1905. The term itself is relatively new in doctrine, but the idea is not. The 1905 FSR included these sentences: “An order should not trespass on the province of the subordinate. It should contain everything which is beyond the independent authority of the subordinate, but nothing more…. It should lay stress upon _the object to be attained_ , and leave open the means to be employed.” By 1914, this had been expanded to include— 
+
+_Officers and men of all ranks and grades are given a certain independence in the execution of the tasks to which they are assigned and are expected to show initiative in meeting the different situations as they arise. Every individual, from the highest commander to the lowest private, must always remember that inaction and neglect of opportunities will warrant more severe censure than an error in the choice of the means._ 
+
+The idea of telling subordinates what to accomplish, not how to do it, and then relying on the initiative of subordinates is fundamental to Army doctrine and has been consistently stated since the 1905 FSR. This idea follows directly from the Army view of war as chaotic. Only leaders allowed the latitude to determine how to accomplish missions and empowered to make decisions can react quickly and effectively to changing circumstances. Only leaders allowed the latitude to act proactively can take advantage of opportunities and react quickly and effectively to threats to mission accomplishment. 
+
+##### **ADHERENCE TO LAW OF WAR STANDARDS AND CIVILIAN CONTROL** 
+
+3-12. The 1905 FSR included the entire General Orders 100 titled “Instructions for the Government of the Armies of the United States in Time of War.” This comprehensive guide written during the American Civil War gave instructions for appropriate treatment of civilians and prisoners of war. This document was the foundation for the current Geneva Conventions. The 1905 FSR reprinted the entire General Orders 100. The next three FSRs included extracts from The Hague Convention and later the Geneva Convention. As doctrine matured over the decades, additional guidelines that govern actions of Soldiers have been developed, all designed to ensure actions comply with international and United States’ laws, United States’ societal values, and those values that guide the profession of arms. These guidelines include, but are not limited to— 
+
+- The Army Ethic. 
+
+- The Code of Conduct. 
+
+- The law of war. 
+
+- The oaths of office. 
+
+- Rules of engagement and rules for the use of force. 
+
+- The Soldier’s Creed. 
+
+- The Warrior Ethos. 
+
+(See the Army website https://www.army.mil/values/ for many of these guidelines.) 
+
+**31 July 2019** 
+
+**ADP 1-01** 
+
+**3-3** 
+
+**Chapter 3** 
+
+##### **JOINT OPERATIONS** 
+
+3-13. The 1923 FSR noted the importance of the air component of the Army in the conduct of combined arms operations. Since World War I, all military operations have been conducted with multinational (alliance and coalition) partners. By the 1949 FM 100-5, in the wake of World War II, the discussion of amphibious operations was couched in terms of joint operations. The 1954 FM 100-5 acknowledged unified commands, specified commands, and other commands or joint task forces that an appropriate authority might establish. It also directed readers to see FM 110-5, _Joint Action Armed Forces_ (now obsolete), for additional details on the organization and functions of the Army. Since 1954, all Army capstone manuals have acknowledged that operations always take place in a joint environment. Lately, the idea of combined arms has gradually expanded to include not only joint and multinational, but also interagency, intergovernmental, and nongovernmental partners as critical to the conduct of operations. 
+
+**3-4** 
+
+**ADP 1-01** 
+
+**31 July 2019** 
+
+##### **Chapter 4** 
+
+### **Taxonomies and Terms of Army Doctrine** 
+
+_Define your terms…or we shall never understand one another._ 
+
+Voltaire _Dictionnaire Philosophique_ 
+
+#### **DOCTRINE FRAMEWORK** 
+
+4-1. The Army creates doctrine for the conduct of operations that accounts for the Army’s view of the nature of war. We use taxonomies (the classification of things or concepts) to organize thoughts about the conduct of operations. They provide a conceptual framework to help Soldiers understand an operational environment; to organize and guide thinking about operations; to visualize how to move from the current state to the desired end state; to derive the tasks, missions, and other responsibilities assigned to units; and to assess both plans and the execution of operations. They are aids for thinking about and conducting operations. The terms of Army doctrine should facilitate, not constrain, that thinking. 
+
+4-2. Effective Soldiers understand what each element of the doctrine framework is designed to do. Each element requires both a definition of the term or taxonomy and a purpose for which it exists. Soldiers understand the interrelationships of the elements to the overall framework and to the other terms and taxonomies—their contributions to the Army’s approach to the conduct of operations. The basic questions for each element are “What does this do to help Soldiers plan, prepare for, execute, and assess operations? Is the term clear? Is it understandable? Will it survive the test of time or is it transitory?” If doctrine cannot answer these questions convincingly, then the term or taxonomy is probably unnecessary. 
+
+4-3. The Army uses major terms and taxonomies to describe how Army forces conduct operations. As such, commanders and staffs should understand and be able to use each of these terms or taxonomies in the conduct of operations. 
+
+#### **TERMS TO DESCRIBE ORGANIZATIONS AND BRANCHES** 
+
+4-4. Certain terms describe organizations and branches. The role defines the broad and enduring purpose for which an organization or branch is established. Core competencies define the overall capabilities of an organization or branch to the Army, while the Army’s core competencies explain the Army’s contribution to the nation’s defense. A function describes a set of subordinate tasks and systems needed to accomplish the role. <u>Characteristics</u> describe the attributes that the organization or branch requires to be effective, while <u>principles are guidelines for the employment of an organization or branch. By applying the functions, guided</u> by characteristics and principles, an organization or branch generates effects in the unique environment of the land domain to support the Army’s operational concept (the latter two terms are also used to describe operational environments and the conduct of operations; they are defined in paragraphs 4-12 and 4-18 respectively). 
+
+##### **ROLE** 
+
+4-5. **A** **_role_ is the broad and enduring purpose for which the organization or branch is established.** An organization or branch has only one role. The purpose of a role is to clearly establish why the organization or branch was created—what it uniquely contributes to the conduct of operations. Roles apply primarily to organizations or branches. Organizations refer to the units of operating forces, from theater armies down to squads. Every organization or branch is designed to fulfill a role. This would often be the definition of the organization or branch. For example, “The role of air defense artillery is to provide fires to protect the force and selected geopolitical assets from aerial attack, missile attack, and surveillance.” This is not a mission 
+
+**31 July 2019** 
+
+**ADP 1-01** 
+
+**4-1** 
+
+**Chapter 4** 
+
+because it does not contain when and where the air defense artillery is to provide fires (see paragraph 4-34 for a discussion of mission). 
+
+##### **CORE COMPETENCIES** 
+
+4-6. **A** **_core competency_ is an essential and enduring capability that a branch or an organization provides to Army operations** . A branch or organization can have more than one core competency. The purpose of a core competency is to provide a clear statement of what a branch or organization does in broad, easily understood, general terms. **The** **_Army core competencies_ are the Army’s essential and enduring capabilities that define the Army’s fundamental contributions to the Nation’s security** . The purpose of the Army’s core competencies is to provide a clear statement of what the Army does in easily understood, general terms derived from Title 10, United States Code and DODD 5100.01. Core competencies drive how the Army organizes, trains, and equips the force. Core competencies explain to both internal and external audiences what the Army, a branch, or an organization contributes to the Nation’s security and to joint force commanders. A core competency is not a task; it is a capability stated in general terms. 
+
+##### **FUNCTION** 
+
+4-7. A _function_ is the broad, general, and enduring role for which an organization is designed, equipped, and trained (JP 1). The purpose of a function is to delineate the set of executable capabilities that an organization or branch requires to accomplish its role. A function can be a warfighting function, or some other grouping of tasks and systems, simply grouped by a common purpose. A function might have subordinate groupings of tasks and systems that themselves form a function. The sustainment warfighting function has subordinate functions of logistics, personnel service support, and health services support. The Army does not label these as sub functions; they are just functions. Most tasks that compose a function can be used as a task in a mission statement (see paragraph 4-34 for discussion on mission and mission statement). 
+
+##### **CHARACTERISTIC** 
+
+4-8. **A** **_characteristic_ is a feature or quality that marks an organization or function as distinctive or is representative of that organization or function** . The purpose of a characteristic is to clearly establish essential attributes that the organization or function must possess to be effective. A characteristic is inherent in the design, mind-set, and equipment for an organization or function and gives that organization or function its unique ability to accomplish its role. 
+
+##### **PRINCIPLE** 
+
+4-9. **A** **_principle_ is a comprehensive and fundamental rule or an assumption of central importance that guides how an organization approaches and thinks about the conduct of operations** (see paragraph 2-3). The purpose of a principle is to capture broad and enduring guidelines for the employment of an organization or function. 
+
+#### **TERMS TO DESCRIBE AN OPERATIONAL ENVIRONMENT** 
+
+4-10. The terms discussed in paragraphs 4-11 through 4-16 are used to describe an operational environment. 
+
+##### **DOMAIN** 
+
+4-11. _Merriam-Webster Dictionary_ has two definitions for domain that apply to doctrine: “a territory over which dominion is exercised” and “a sphere of knowledge, influence, or activity.” The purpose of a domain is to provide useful constructs to aid in— 
+
+- Describing general areas of knowledge. 
+
+- Visualizing and characterizing the environment in which forces conduct operations. 
+
+The first definition applies specifically to leadership (domains of knowledge: tactical, technical, joint, and cultural and geopolitical) and training (training domains: operational, institutional, and self-development). The second definition refers to an operational domain—a territory over which the armed forces attempt to 
+
+**4-2** 
+
+**ADP 1-01** 
+
+**31 July 2019** 
+
+**Taxonomies and Terms of Army Doctrine** 
+
+achieve dominion (domination). These physical domains consist of air, land, maritime, space and cyberspace. The factors of an operational environment (expressed in terms of the operational and mission variables) reside in these domains (see paragraphs 4-14 through 4-16 which discuss these variables). While the Army operates in and uses all domains (with significant presence in, and use of, the air and cyberspace domains), it dominates the land domain. 
+
+##### **LAND DOMAIN** 
+
+4-12. The _land domain_ is the area of the Earth’s surface ending at the high water mark and overlapping with the maritime domain in the landward segment of the littorals (JP 3-31). The purpose of the land domain is to distinguish the characteristics of an operational environment on land from the characteristics of other domains and those that significantly affect the conduct of operations. The majority (but not all) of the operational variables that affect large-scale combat operations reside in the land domain. The land domain differs from the other domains. These differences directly affect doctrine for land forces. The land domain differs due to the following factors: 
+
+- Its physical aspects vary much more than the other domains. The variety of landforms, climates, and elevations greatly affects mobility, sight lines, cover and concealment, and other factors more than it affects the other domains. While the other domains have variations, the variety is much more homogenous than the land domain. 
+
+- Human beings live in the land domain. The density of the population on land directly affects the conduct of large-scale ground combat operations. The density of the population rarely impacts air, maritime, space, or cyberspace domains. The physical presence of most humans on land makes large-scale combat operations depend on interactions with the population more than operations in the other domains depend on interactions. 
+
+- Large-scale combat operations typically involve a more complex set of organizations with many more moving parts than do operations in the other domains. For example, moving 15,000 people in a naval task force may require orders to only a handful of platforms. Moving 15,000 people in an Army division involves thousands of vehicles and often individual Soldiers. Commanders at all echelons, and even individuals, have choices about when, where, and how to move and have to be informed about the movement. Whereas the Navy and Air Force typically employ dozens to hundreds of platforms in episodic contact with an enemy, land forces typically employ thousands of platforms and tens of thousands of Soldiers in sometimes constant contact with an enemy. 
+
+- The number and variety of simultaneous actions by numerous different actors who constantly interact with each other makes the land domain more complex and chaotic than other domains. Actors with different objectives—each affected by terrain, weather, populations, and governments—produce many more decisions made by more individuals than other domains produce. 
+
+- Terrain and population directly affect Soldiers’ movement and ability to generate combat power. The terrain, population, and moving parts of an operational environment introduce another level of friction. This friction places greater demands on leaders at all levels, and even on individual Soldiers, to make decisions in the absence of perfect information. 
+
+##### **OPERATIONAL ENVIRONMENT** 
+
+> 4-13. An _operational environment_ is a composite of the conditions, circumstances, and influences that affect the employment of capabilities and bear on the decisions of the commander (JP 3-0). It encompasses physical areas and factors of the domains and the information environment. The purpose of an operational environment is to aid in understanding the totality of factors, specific circumstances, and conditions that impact the conduct of operations. This understanding enables leaders to better identify the problem; anticipate potential outcomes; and understand the results of various friendly, enemy, adversary, and neutral actions and the effects these actions have in achieving the military end state. A description of an operational environment includes all the factors that the commander and staff need to capture and understand to inform the conduct of operations. An operational environment differs from an area of operations. An area of operations is a specific part of the land domain (see paragraph 4-37). An operational environment is the totality of factors that affect what occurs in an area of operations. These factors may include events or actions that occur outside 
+
+**31 July 2019** 
+
+**ADP 1-01** 
+
+**4-3** 
+
+**Chapter 4** 
+
+the area of operations. A commander is responsible for (or owns) an area of operations. One cannot own an operational environment. 
+
+##### **OPERATIONAL VARIABLES AND MISSION VARIABLES** 
+
+4-14. Army leaders plan, prepare, execute, and assess operations by analyzing an operational environment in terms of the operational variables and mission variables. The methods in which these variables interact in a specific situation, domain (air, land, maritime, space, or cyberspace), area of operations, or area of interest describe a commander’s operational environment. 
+
+###### **Operational Variables** 
+
+4-15. **_Operational variables_ are a comprehensive set of information categories used to describe an operational environment** . The categories are political, military, economic, social, information, infrastructure, physical environment, and time (known as PMESII-PT). The purpose of operational variables is to provide a broad, general set of information categories that assist commanders and staffs in analyzing and developing a comprehensive understanding of an operational environment. 
+
+###### **Mission Variables** 
+
+4-16. **_Mission variables_ are the categories of specific information needed to conduct operations** . The mission variables are mission, enemy, terrain and weather, troops and support available, time available, and civil considerations (known as METT-TC). The purpose of mission variables is to provide a set of information categories focused on what commanders and staffs need to know to achieve situational understanding once assigned a mission. Commanders and staffs use mission variables as a filter to extract information from the operational variables that staffs need to conduct an operation and commanders need to exercise mission command. 
+
+#### **TERMS AND TAXONOMIES FOR THE CONDUCT OF OPERATIONS** 
+
+4-17. The terms discussed in paragraphs 4-18 through 4-38 specifically apply to the conduct of operations. They relate directly to the operations process. 
+
+##### **OPERATIONAL CONCEPT** 
+
+4-18. **The** **_operational concept_ is a fundamental statement that frames how Army forces, operating as part of a joint force, conduct operations** . It is the fundamental approach that underlies all operations. The purpose of the operational concept is to serve as a basic framework for all operations across the range of military operations. As such, it is the core of doctrine. It guides the development of subordinate operational structures and is the basic approach to all operations. The operational concept must be uniformly known and understood throughout the Army. It describes how Army forces adapt to meet the distinct requirements of large-scale combat operations. The operational concept should be broad enough to describe current operations and projected future operations, and flexible enough to apply in any situation worldwide. Unified land operations is the current operational concept. Previous operational concepts were full spectrum operations and AirLand Battle. The operational concept differs from capstone, operating, and functional concepts (part of the capabilities development process) that deal with how future Army forces may operate (see paragraph 2-26). The operational concept underlies today’s operations. It is the foundation of existing doctrine. 
+
+##### **DECISIVE ACTION** 
+
+4-19. _Decisive action_ is the continuous, simultaneous execution of offensive, defensive, and stability operations or defense support of civil authorities tasks (ADP 3-0). The purpose of decisive action is to ensure that all major aspects of an operation are accounted for and that operations consider offensive, defensive, and stability or defense support of civil authorities tasks as inherent tasks in all operations. Decisive action ensures that operations fully account for the impact of civilians on operations and their required support in an area of 
+
+**4-4** 
+
+**ADP 1-01** 
+
+**31 July 2019** 
+
+**Taxonomies and Terms of Army Doctrine** 
+
+operations. Decisive action also ensures that operations dominated by stability tasks do not overlook the inherent danger in all operations, by considering the need for offensive and defensive tasks. 
+
+##### **MISSION COMMAND** 
+
+4-20. _Mission command_ is the Army’s approach to command and control that empowers subordinate decision making and decentralized execution appropriate to the situation (ADP 6-0). The purpose of mission command is to firmly inculcate within the Army the most effective means to account for the fog and friction of war, unleash the initiative of subordinates, and encourage rapid and effective decisions at the appropriate levels in the execution of leadership and command. Commanders are responsible for establishing this philosophy within their commands as well as training and educating their subordinates according to its principles. 
+
+##### **WARFIGHTING FUNCTION** 
+
+4-21. A _warfighting function_ is a group of tasks and systems united by a common purpose that commanders use to accomplish missions and training objectives (ADP 3-0). The Army’s warfighting functions are fundamentally linked to the joint functions. A number of subordinate tasks, missions, and related capabilities help define each function; some apply to more than one function. The warfighting functions are the physical means that tactical commanders use to execute operations and accomplish missions assigned by superior tactical- and operational-level commanders. The purpose of warfighting functions is to provide an intellectual organization for common critical capabilities available to commanders and staffs at all echelons and levels of war. Commanders integrate and synchronize capabilities of one warfighting function with other warfighting functions to achieve objectives and accomplish missions. These grouped and related capabilities and activities help commanders and staffs integrate, synchronize, and direct operations. Commanders and staffs use the warfighting functions to ensure major groupings are accounted for in every operation and to conceptualize and apply capabilities to accomplish the mission through synchronizing forces and warfighting functions in time, space, and purpose. Combined arms operations use the capabilities of each warfighting function, along with leadership and information, in complementary and reinforcing capabilities. 
+
+##### **COMBAT POWER** 
+
+4-22. _Combat power_ is the total means of destructive, constructive, and information capabilities that a military unit or formation can apply at a given time (ADP 3-0). Combat power has eight elements: leadership, information, command and control, movement and maneuver, intelligence, fires, sustainment, and protection. The last six elements are the warfighting functions. The purpose of combat power is to accomplish missions. It also helps commanders conceptualize capabilities to execute combined arms operations. 
+
+##### **PRINCIPLES OF WAR AND PRINCIPLES OF JOINT OPERATIONS** 
+
+4-23. **The** **_principles of operations_ are time-tested general characteristics of successful operations that serve as guides for the conduct of future operations** . Not prescriptive, they represent characteristics that, when accounted for in plans and execution, have proven to positively affect the outcome of operations. The principles of joint operations are the principles of war plus three recently added principles—restraint, perseverance, and legitimacy. The purpose of the principles of joint operations is to provide commanders and staffs a tool to analyze plans and operations to ensure critical characteristics have been accounted for or that their absence is deliberate and not a matter of oversight. They represent important factors that affect the conduct of operations across the levels of war. The principles are not a checklist. While commanders consider the principles in all operations, the principles do not apply in the same way to every situation. Rather, they summarize characteristics of successful operations. Their greatest value lies in educating the military professional. Applied to the study of past operations, the principles are powerful tools that can assist commanders in analyzing pending operations. While considering the principles, commanders synchronize efforts and determine if or when to deviate from the principles based on the current situation. 
+
+**31 July 2019** 
+
+**ADP 1-01** 
+
+**4-5** 
+
+**Chapter 4** 
+
+##### **TENETS OF OPERATIONS** 
+
+4-24. **The** **_tenets of operations_ are desirable attributes that should be built into all plans and operations and are directly related to the Army’s operational concept** . The purpose of the tenets is to provide planners with criteria to evaluate whether plans and operations are designed to achieve the desirable characteristics. 
+
+##### **OPERATIONAL ART** 
+
+4-25. _Operational art_ is the cognitive approach by commanders and staffs—supported by their skill, knowledge, experience, creativity, and judgment—to develop strategies, campaigns, and operations to organize and employ military forces by integrating ends, ways, and means (JP 3-0). The purpose of operational art is to provide a set of tools to formulate the most effective, efficient way to accomplish missions by the arrangement of actions in time, space, and purpose, and to overcome the ambiguity and intricacies of a complex, ever-changing, and uncertain operational environment. Elements of operational art are individual cognitive tools that help the commander and staffs visualize and describe the broad operational approach. The elements of operational art are intellectual tools that help commanders and staffs— 
+
+- Understand an operational environment and the problem or problems at hand during the Army design methodology. 
+
+- Understand, visualize, and describe approaches for conducting the operation, to include the integration and synchronization of the elements of combat power as well as their commander’s intent and guidance. 
+
+- Determine the most effective and efficient methods for applying decisive action in various locations across multiple echelons. 
+
+- Envision how to establish conditions that accomplish their missions. 
+
+- Translate the operational approach into a concept of operations and ultimately into tactical tasks. 
+
+- Help to integrate ends, ways, and means while accounting for risk. 
+
+##### **OPERATIONAL APPROACH** 
+
+4-26. An _operational approach_ is a broad description of the mission, operational concepts, tasks, and actions required to accomplish the mission (JP 5-0). The purpose of an operational approach is to provide a framework that relates tactical tasks to the desired end state. It provides a unifying purpose and focus to all operations. It links conceptual planning with detailed planning by providing the main idea that outlines detailed planning and guides the force through preparation and execution. The operational approach enables commanders to begin visualizing and describing possible combinations of actions to reach the desired end state, given the tensions identified in an operational environment and problem frames. The staff uses operational approaches to develop courses of action during detailed planning. 
+
+##### **OPERATIONAL FRAMEWORK** 
+
+4-27. **An** **_operational framework_ is a cognitive tool used to assist commanders and staffs in clearly visualizing and describing the application of combat power in time, space, purpose, and resources in the concept of operations** . It provides a basis for decisions on allocating resources based on priorities and geographical location of critical events. The purpose of an operational framework is to facilitate decisions about when and where to apply resources, ensure the synchronization of subordinate tasks, and provide the means to shift priorities of support as situations change. 
+
+##### **OPERATIONS PROCESS** 
+
+4-28. The _operations process_ is the major mission command and control activities performed during operations: planning, preparing, executing, and continuously assessing the operation (ADP 5-0). The purpose of the operations process is to provide a common, logical, inter-related set of processes that guide the conduct of operations. It is the basic underlying process that guides the employment of forces and ensures the synchronization of all elements of combat power for the conduct of operations. The operations process provides a flexible, adaptable set of activities capable of adjusting to changing circumstances and which 
+
+**4-6** 
+
+**ADP 1-01** 
+
+**31 July 2019** 
+
+**Taxonomies and Terms of Army Doctrine** 
+
+facilitates a common approach to operations across all echelons and all environments. It is the operations process that allows commanders and staffs to synchronize and link all other components into a coherent and logical plan and facilitates the execution of the plan through adaptation to changing circumstances. 
+
+##### **THE LEVELS OF WARFARE** 
+
+4-29. **The** **_levels of warfare_ are a framework for defining and clarifying the relationship among national objectives, the operational approach, and tactical tasks** . The purpose of the levels of warfare is to focus a headquarters on one of three broad roles—creating strategy, synchronizing and sequencing battles and engagements, or conducting tactical tasks. The three levels of warfare—strategic, operational, and tactical— define and clarify the relationships among national objectives, the operational approach, and tactical actions. They help commanders visualize a logical arrangement and synchronization of operations, allocate resources, and assign tasks to the appropriate command. The levels of warfare correlate to specific levels of responsibility. They are about the tasks that commanders and staffs at various headquarters carry out to achieve goals set by political leaders. The levels of warfare should not be confused with effects—which can also be strategic, operational, or tactical and can be generated by any echelon, or even individuals. The fact that an echelon or individual generates a strategic effect does not mean that the echelon or individual is operating at the strategic level of warfare. A simple technique (such as executing a search pattern and planning a bombing run on an aircraft carrier at Midway) can have a theater strategic effect. But the pilot is not determining how the instruments of national power are synchronized to accomplish political end states. 
+
+###### **Strategic Level** 
+
+4-30. The strategic level of warfare establishes national, theater, and multinational objectives (ends). It derives a foundational idea or set of ideas for employing the instruments of national power in a synchronized and integrated fashion to achieve these objectives (ways). It sequences initiatives and defines the limits of risk in operations. It also provides the capabilities (means) used to accomplish these ends. Military strategy, derived from national policy and strategy and informed by doctrine, provides a framework for conducting operations. The strategic level of warfare is primarily the province of national leadership and geographic combatant commands. It is expressed in national security, defense, and military strategies and joint doctrine. 
+
+###### **Operational Level** 
+
+4-31. The operational level of warfare links the tactical employment of forces to national and military strategic objectives through the design of campaigns and major operations. It determines how, when, where, and for what purpose commanders will employ major forces to achieve assigned ends. It sequences and synchronizes battles, engagements, and other operations (such as disaster relief and support to governance) to achieve operationally significant outcomes. Operational commanders position and maneuver forces to shape conditions for their decisive operation within their assigned operational areas. Commanders exploit tactical victories to gain strategic advantage or reverse the strategic effects of tactical losses. Operationallevel headquarters determine objectives and provide resources for tactical operations. Operational art governs the deployment of those forces and the arrangement of operations to achieve operational and strategic objectives. The operational level of war is addressed in both joint and Service doctrine. 
+
+###### **Tactical Level** 
+
+4-32. The tactical level of warfare is about the conduct of tactical actions, battles, engagements, and other tactical tasks to achieve military objectives assigned to tactical units or task forces. When all the tactical tasks assigned to tactical units are performed, they should accomplish operationally significant results. The tactical level of war is addressed primarily in Service doctrine. 
+
+##### **OPERATION** 
+
+4-33. An _operation_ is a military action or the carrying out of a strategic, operational, tactical, service, training, or administrative military mission (JP 3-0). The purpose of an operation is to achieve an assigned objective (end state) at the prescribed time and place by a specific unit. An operation is the carrying out of an assigned mission. 
+
+**31 July 2019** 
+
+**ADP 1-01** 
+
+**4-7** 
+
+**Chapter 4** 
+
+##### **MISSION** 
+
+4-34. A _mission_ is the task, together with the purpose, that clearly indicates the action to be taken and the reason therefore (JP 3-0). A mission statement always includes who (the organization), what (a task or tasks), when (time to accomplish the task), where (the place the task is to be accomplished, usually an area of operations), and why (purpose). The purpose of a mission is to assign a specific requirement for action to be accomplished by a unit. In doctrine, missions are only used when conducting operations. Organizations and functions do not have missions until they are employed. The generic, ongoing use that organizations have is part of their roles and functions. Thus a mission is something (a task—action to be taken) that is assigned to a unit to execute for a reason (the purpose)—commonly abbreviated as task and purpose. 
+
+##### **TASK** 
+
+4-35. A _task_ is a clearly defined action or activity specifically assigned to an individual or organization that must be done as it is imposed by an appropriate authority (JP 1). A task may be collective or individual. Collective tasks specify what an organization or function is specifically intended to do, beyond the general purpose of its role. The purpose of a task is to clearly define a specific action or activity necessary to achieve a specific end, either in training or on operations. For example, the role of infantry might be to close with and destroy the enemy through close combat. Tasks might then be to conduct maneuver to a position of advantage, mass direct fires on a target, or conduct infiltration. Commanders and staffs use the Combined Arms Training Strategies to identify collective or individual tasks to plan for unit training. (See the Army Training Network website for Combined Arms Training Strategies, collective tasks, and individual tasks.) 
+
+##### **CONTROL MEASURE** 
+
+4-36. A _control measure_ is a means of regulating forces or warfighting functions (ADP 6-0). The purpose of control measures is to ensure a thorough understanding between and among echelons of duties and responsibilities related to the conduct of operations. Control measures can be permissive or restrictive. When understood by all, they convey a great deal of information with simple words or graphics about what can or cannot be done in various circumstances or in various areas. Control measures greatly facilitate coordinating and synchronizing responsibilities for conducting operations. 
+
+##### **AREA OF OPERATIONS** 
+
+4-37. An _area of operations_ is an operational area defined by a commander for land and maritime forces that should be large enough to accomplish their missions and protect their forces (JP 3-0). For land operations, an area of operations includes subordinate areas of operations assigned by Service commanders as well. The purpose of an area of operations is to clearly delineate an area within which a specific commander has primary responsibility for integrating and synchronizing the warfighting functions, clearing all uses, and controlling all effects. A commander has the authority to designate targeting priority, effects, and timing of all activities within his or her assigned area of operations, except when higher headquarters imposes specific operational limitations. 
+
+##### **OPERATION ORDER OR PLAN** 
+
+4-38. An _operation order_ is a directive issued by a commander to subordinate commanders for the purpose of effecting the coordinated execution of an operation (JP 5-0). An operation plan is an operation order that has not been assigned a time for execution. The purpose of an operation order is to help leaders and staffs ensure that all information necessary to execute the operation is accounted for and conveyed to subordinates in a format that facilitates their finding the information that pertains to them. 
+
+#### **THE DIFFERENCE BETWEEN OPERATIONS AND WARFIGHTING FUNCTIONS** 
+
+4-39. Operations and the warfighting functions are closely connected but distinct from each other, both in purpose and in structure. The difference can be stated simply: An operation consists of the tasks required to accomplish a specific mission. In contrast, each warfighting function consists of tasks whose purpose is to 
+
+**4-8** 
+
+**ADP 1-01** 
+
+**31 July 2019** 
+
+**Taxonomies and Terms of Army Doctrine** 
+
+achieve the same effects, regardless of the situation. The operation order for a given mission contains tasks from each warfighting function necessary to accomplish the mission; however, the actions necessary to perform the tasks for a given warfighting function are the same, regardless of the mission. 
+
+4-40. The purpose of the warfighting functions is to provide an intellectual organization of common capabilities available to commanders and staffs to achieve objectives and accomplish missions. These capabilities serve as the building blocks to generate combat power. Said another way, combat power is the actual physical incarnation of all the capabilities available to the commander for the conduct of operations. Thus a warfighting function is an aggregation (a set) of capabilities used to produce results. 
+
+4-41. An operation is a series of military actions to achieve assigned objectives and accomplish the mission. The focus of an operation is an outcome. Commanders integrate the warfighting functions to generate and maintain combat power to perform tasks, achieve objectives, and attain the operation’s end state—an outcome. 
+
+4-42. In large-scale ground combat operations, generating and maintaining combat power is essential to success. Commanders combine and apply the elements of combat power to produce overwhelming effects throughout operations. In short, a warfighting function is a set of capabilities, whereas an operation is designed to produce an outcome that uses the capabilities provided by the warfighting function. Within most of the warfighting functions, there are tasks that can be used as a task to some formation (type of unit), which when combined with the when, where, and why constitute a mission to be executed by that unit—that is, it becomes an operation for that unit. 
+
+4-43. The difference between these tasks and an operation is simple. For almost all tasks successful execution requires use of all the warfighting functions in various combinations to achieve success. While there are some exceptions, the tasks listed under warfighting functions do not require all the other warfighting functions for success. In fact, many of those tasks are staff tasks and not unit tasks. Even those that are unit tasks are rarely tasks that, when successfully executed, result in performance of a task that directly contributes to the end state. In most cases, it contributes to a higher headquarters’ task that further combines multiple tasks related to other warfighting functions. 
+
+4-44. Another way to look at this is to think about how a given echelon routinely combines certain common tasks to accomplish missions. An artillery headquarters assigned a mission to conduct fire support (which constitutes an operation for the artillery unit) will always need to carry out tasks associated with— 
+
+- Mission command (it must plan, prepare, execute, and assess the operation). 
+
+- Movement and maneuver (it must move its firing units into location). 
+
+- Intelligence (it needs targetable locations and identification of targets). 
+
+- Protection (it must survive in a hostile environment). 
+
+- Sustainment (it requires supplies of ammunition, replacement personnel, and so on). 
+
+What it does not need are any of the tasks grouped under decisive action. Fires are a function used to conduct operations, not the operation itself. 
+
+**31 July 2019** 
+
+**ADP 1-01** 
+
+**4-9** 
+
+This page intentionally left blank. 
+
+##### **Chapter 5** 
+
+### **Application of Doctrine** 
+
+_With 2,000 years of examples behind us we have no excuse, when fighting, for not fighting well._ 
+
+T. E. Lawrence quoted in _The Liddell Hart Memoirs_ 
+
+#### **THE RELATIONSHIPS** 
+
+5-1. The preceding chapters have discussed doctrine, its sources, its changes, and a number of tools and taxonomies needed to understand and apply it. This chapter addresses topics related to understanding and applying doctrine. It is not enough to know terms and definitions. Army professionals must also understand their relationships—how they fit together—when applied to studying and more importantly to conducting operations. Part of this understanding comes from being able to compare and contrast terms and concepts to understand them and their use, as is done in chapter 4’s discussion of operations and warfighting functions. Doctrine is central to helping leaders and Soldiers remain abreast of current thought and technology and to apply Army capabilities to accomplish any mission they are assigned. 
+
+5-2. Everything related to the conduct of operations is part of an operational environment, the one category that accounts for all political, military, economic, social, information, infrastructure, physical environment, and time (known as PMESII PT or operational variables) considerations that influence operations and training for operations. These variables need to be captured and continuously updated by analysis in running estimates and understood by the commander and staff even before the assignment of a mission. Operational variables may reside in any of the domains (air, land, maritime, space, and cyberspace). Once a mission is assigned, a commander and staff’s analysis is framed by the <u>mission variables (known as METT-TC), which narrows</u> down the operational variables to those that affect a specific mission. 
+
+5-3. Once a mission is assigned, Army commanders and staffs have to understand their mission within the context of the land domain. Large-scale combat operations take place within a broader context that includes the political arena, joint operations, and other Service operations. It is in the political arena and higher level joint headquarters, the strategic level of warfare, that the overall political and military objectives are defined. Once the military objectives are defined, specific instructions are issued to joint task forces operating at the <u>operational level of warfare, which in turn assign tasks to, among others, the land component. Understanding</u> this context is necessary to ensure that large-scale combat operations are part of a coherent and cohesive whole. 
+
+5-4. All large-scale ground combat operations take place within the context of a joint campaign. Understanding the joint structure and doctrine is required to fully understand the role of land forces in the overall campaign. Land operations begin with a <u>mission</u> assigned by a joint force commander to a land component, or from one echelon within the land component to another at the tactical level of warfare. The receipt of a mission starts the process of actually employing land forces. 
+
+5-5. Once a mission is assigned or a prospective mission is determined, it starts the operations process that brings everything together in a headquarters. Planning starts with the receipt of a mission and updating the current understanding of an operational environment in which the mission will be accomplished. The higher headquarters’ operation order or plan creates a task organization that allocates resources to the command. This task organization delineates the combat power the unit has to perform the assigned task. 
+
+**31 July 2019** 
+
+**ADP 1-01** 
+
+**5-1** 
+
+**Chapter 5** 
+
+#### **PLANNING** 
+
+5-6. Planning begins with an analysis and understanding of a specific <u>operational environment filtered</u> through the specific <u>mission, which in turn determines which information elements of the operational variables are carried over and filtered by the mission variables for analysis. A thorough understanding of an</u> operational environment and assigned mission enables the commander and staff to envision a desired end state and broad approach to achieve that end state using the elements of operational art. Through operational <u>art and the principles of joint operations, commanders understand, visualize, and describe the integration and</u> synchronization of the elements of combat power to achieve objectives, attain end state conditions in broad terms, determine an operational approach, and describe their commander’s intent and guidance. Commanders selectively use these tools in any operation. However, the tools’ broadest application applies to long-term operations. The operational approach is determined in part by the combat power available to the commander. It tells the commander what is the potential that can be translated into effects or actions. It is a measure of the total capacity the commander has at his or her disposal. The critical issue here is always to know if the combat power available is adequate to accomplish assigned missions. This is the conceptual stage of planning. 
+
+5-7. The commander and staff then go into detailed planning to develop one or more courses of action. Each course of action will assign broad general tasks and priorities of support to each warfighting function. These broad general tasks represent the major activities that constitute the building blocks for a course of action. Warfighting functions are the broad capabilities that must be accounted for in all operations. By developing how each function contributes to attaining the end state (developing a scheme of support for each warfighting function—a scheme of maneuver, scheme of fires, scheme of sustainment, and so on), the commander lays out a broad approach to move from the current state to the end state. The courses of action should synchronize the warfighting functions in order to generate combat power. 
+
+5-8. Allocation of resources is usually done through one of the <u>operational frameworks. The operational</u> frameworks provide a tool that helps commanders frame where to apply combat power (warfighting functions) to achieve specific effects. Commanders and staffs use the main and supporting efforts to indicate the shifting of priorities of support by each warfighting function when the complexity of operations requires sequential application of combat power using phases or when circumstances require a change in the concept of operations. While developing and evaluating the courses of action, commanders and staffs use the <u>principles of joint operations and the tenets of unified land operations as tools to assess whether or not courses</u> of action account for important characteristics of operations that were effective, or are desired characteristics of current operations. Both principles and tenets should assist commanders and staffs in visualizing how to structure a course of action and concept of operations. 
+
+5-9. Commanders and staffs use the Army planning methodologies (Army design methodology, the military decision-making process, and troop leading procedures) to analyze multiple courses of action to determine the most suitable one. Once the commander approves a course of action, the remainder of the military decision-making process determines the specific tasks assigned to subordinate units that will accomplish the mission in the area of operations and ultimately achieve the identified end state. These specific tactical tasks come from the set of tasks of decisive action, the tactical tasks of offense, <u>defense, and stability or defense support of civil authorities, and enabling tasks, and the subordinate tasks thereof. The end result of this</u> process should be an operation order. The operation order will establish the relationship between mission, commander’s intent, and concept of operations. The operation order guides commanders’ arrangement of warfighting functions to mass the effects of combat power at the chosen place and time to overwhelm an enemy or dominate the situation. 
+
+5-10. The best operation orders are mission orders. _Mission orders_ are directives that emphasize to subordinates the results to be attained, not how they are to achieve them (ADP 6-0). They facilitate mission <u>command</u> by providing subordinates with a clear commander’s intent, latitude to determine how to accomplish missions, and flexibility to exercise disciplined initiative within the commander’s intent. 
+
+5-11. Mission command is essential in the land environment. It allows for more rapid decision-making at the lowest levels and best accounts for the fog, friction, and complexity of the land environment, maximizing combat power over time. Mission command is essential to execute the Army’s operational concept of unified land operations. The force cannot seize, retain, and exploit the initiative effectively without the disciplined initiative of subordinates. 
+
+**5-2** 
+
+**ADP 1-01** 
+
+**31 July 2019** 
+
+### **Source Notes** 
+
+This division lists sources by page number. Where material appears in a paragraph, it lists both the page number followed by the paragraph number. 
+
+- 1-1 “The central idea…”: J. F. C. Fuller, _The Foundations of the Science of War_ (Fort Leavenworth, KS: U.S. Army Command and General Staff College Press, 1993), 254. 
+
+- 2-1 “I am tempted…”: Michael Howard, “Military Science in the Age of Peace,” _The RUSI Journal_ , Volume 119, (March 1974): 7. 
+
+- 3-1 “War is not for…”: Jim Storr, _The Human Face of War_ (New York, NY: Continuum US, 2009), 27–28. 
+
+- 3-2 3-10. “Success in war…”: _Field Service Regulations_ (Washington, DC: Government Printing Office, 1914), 3. 
+
+- 3-3 3-11. “An order should…”: _Field Service Regulations_ (Washington, DC: Government Printing Office, 1905), 29–30. 
+
+- 3-3 3-11. “Officers and men…”: _Field Service Regulations_ (Washington, DC: Government Printing Office, 1914), 3. 
+
+- 4-1 “Define your terms…” Voltaire, _The Works of Voltaire: A Philosophical Dictionary_ , trans. by William F. Fleming (Akron, OH: The Werner Company, 1905), 281. 
+
+- 4-2 4-12. “a territory over…”: Merriam-Webster Online Dictionary copyright © 2015 by Merriam-Webster, Incorporated. https://www.merriam-webster.com/dictionary/domain. 
+
+- 5-1 “With 2,000 years…”: T. E. Lawrence, 26 April 1933, in letter to Captain Sir Basil Liddell Hart, quoted in _The Liddell Hart Memoirs_ , Volume I, (London: Cassell and Company, LTD, 1965), 349. 
+
+**Source Notes-1** 
+
+**31 July 2019** 
+
+**ADP 1-01** 
+
+This page intentionally left blank. 
+
+### **Glossary** 
+
+The glossary lists acronyms and terms with Army or joint definitions. Where Army and joint definitions differ, (Army) precedes the definition. Terms for which the ADP 1-01 is the proponent are marked with an asterisk (*). The proponent manual for other terms is listed in parentheses after the definition. 
+
+##### **SECTION I – ACRONYMS AND ABBREVIATIONS** 
+
+|**ADP**|Army doctrine publication|
+|---|---|
+|**CJCSI**|Chairman of the Joint Chiefs of Staff instruction|
+|**CJCSM**|Chairman of the Joint Chiefs of Staff manual|
+|**DA**|Department of the Army|
+|**DODD**|Department of Defense directive|
+|**DOTMLPF**|doctrine, organization, training, materiel, leadership and education, personnel,<br>and facilities|
+|**FM**|field manual|
+|**FSR**|field service regulation|
+|**JP**|joint publication|
+|**MIL-STD**|military standard|
+|**NATO**|North Atlantic Treaty Organization|
+|**TTP**|tactics, techniques, and procedures|
+|**U.S.**|United States|
+
+
+
+##### **SECTION II – TERMS** 
+
+###### **area of operations** 
+
+An operational area defined by a commander for land and maritime forces that should be large enough to accomplish their missions and protect their forces. (JP 3-0) 
+
+###### ***Army core competencies** 
+
+The Army’s essential and enduring capabilities that define the Army’s fundamental contributions to the Nation’s security. 
+
+###### ***Army doctrine** 
+
+Fundamental principles, with supporting tactics, techniques, procedures, and terms and symbols, used for the conduct of operations and as a guide for actions of operating forces, and elements of the institutional force that directly support operations in support of national objectives. 
+
+###### ***characteristic** 
+
+A feature or quality that marks an organization or function as distinctive or is representative of that organization or function. 
+
+###### **combat power** 
+
+(Army) The total means of destructive, constructive, and information capabilities that a military unit or formation can apply at a given time. (ADP 3-0) 
+
+**Glossary-1** 
+
+**31 July 2019** 
+
+**ADP 1-01** 
+
+**Glossary** 
+
+###### **control measure** 
+
+A means of regulating forces or warfighting functions. (ADP 6-0) 
+
+###### ***core competency** 
+
+An essential and enduring capability that a branch or an organization provides to Army operations. 
+
+###### **decisive action** 
+
+The continuous, simultaneous execution of offensive, defensive, and stability operations or defense support of civil authorities tasks. (ADP 3-0) 
+
+###### **function** 
+
+The broad, general, and enduring role for which an organization is designed, equipped, and trained. (JP 1) 
+
+###### **joint doctrine** 
+
+Fundamental principles that guide the employment of United States military forces in coordinated action toward a common objective and may include terms, tactics, techniques, and procedures. (CJCSI 5120.02) 
+
+###### **land domain** 
+
+The area of the Earth’s surface ending at the high water mark and overlapping with the maritime domain in the landward segment of the littorals. (JP 3-31) 
+
+###### ***levels of warfare** 
+
+A framework for defining and clarifying the relationship among national objectives, the operational approach, and tactical tasks. 
+
+###### **mission** 
+
+The task, together with the purpose, that clearly indicates the action to be taken and the reason therefore. (JP 3-0) 
+
+###### **mission command** 
+
+(Army) The Army’s approach to command and control that empowers subordinate decision making and decentralized execution appropriate to the situation. (ADP 6-0) 
+
+###### **mission orders** 
+
+Directives that emphasize to subordinates the results to be attained, not how they are to achieve them. (ADP 6-0) 
+
+###### ***mission variables** 
+
+Categories of specific information needed to conduct operations. 
+
+###### **multinational doctrine** 
+
+The agreed upon fundamental principles that guide the employment of forces of two or more nations in coordinated action toward a common objective. (JP 3-16) 
+
+###### **multi-Service publication** 
+
+A publication containing principles, terms, tactics, techniques, and procedures used and approved by the forces of two or more Services to perform a common military function consistent with approved joint doctrine. (CJCSM 5120.01A) 
+
+###### **operation** 
+
+A military action or the carrying out of a strategic, operational, tactical, service, training, or administrative military mission. (JP 3-0) 
+
+###### **operational approach** 
+
+A broad description of the mission, operational concepts, tasks, and actions required to accomplish the mission. (JP 5-0) 
+
+**Glossary-2** 
+
+**ADP 1-01** 
+
+**31 July 2019** 
+
+**Glossary** 
+
+###### **operational art** 
+
+The cognitive approach by commanders and staffs—supported by their skill, knowledge, experience, creativity, and judgment—to develop strategies, campaigns, and operations to organize and employ military forces by integrating ends, ways, and means. (JP 3-0) 
+
+###### ***operational concept** 
+
+A fundamental statement that frames how Army forces, operating as part of a joint force, conduct operations. 
+
+###### **operational environment** 
+
+A composite of the conditions, circumstances, and influences that affect the employment of capabilities and bear on the decisions of the commander. (JP 3-0) 
+
+###### ***operational framework** 
+
+A cognitive tool used to assist commanders and staffs in clearly visualizing and describing the application of combat power in time, space, purpose, and resources in the concept of operations. 
+
+###### ***operational variables** 
+
+A comprehensive set of information categories used to describe an operational environment. 
+
+###### **operation order** 
+
+A directive issued by a commander to subordinate commanders for the purpose of effecting the coordinated execution of an operation. (JP 5-0) 
+
+###### **operations process** 
+
+The major mission command and control activities performed during operations: planning, preparing, executing, and continuously assessing the operation. (ADP 5-0) 
+
+###### ***principle** 
+
+A comprehensive and fundamental rule or an assumption of central importance that guides how an organization approaches and thinks about the conduct of operations. 
+
+###### ***principles of operations** 
+
+Time-tested general characteristics of successful operations that serve as guides for the conduct of future operations. 
+
+###### **procedures** 
+
+Standard, detailed steps that prescribe how to perform specific tasks. (CJCSM 5120.01A) 
+
+###### ***role** 
+
+The broad and enduring purpose for which the organization or branch was established. 
+
+###### ***Service doctrine** 
+
+Those publications approved by a single Service for use within that Service. 
+
+###### **tactics** 
+
+The employment and ordered arrangement of forces in relation to each other. (CJCSM 5120.01A) 
+
+###### **task** 
+
+A clearly defined action or activity specifically assigned to an individual or organization that must be done as it is imposed by an appropriate authority. (JP 1) 
+
+###### **techniques** 
+
+Non-prescriptive ways or methods used to perform missions, functions, or tasks. (CJCSM 5120.01A) 
+
+###### ***tenets of operations** 
+
+Desirable attributes that should be built into all plans and operations and are directly related to the Army’s operational concept. 
+
+###### **warfighting function** 
+
+A group of tasks and systems united by a common purpose that commanders use to accomplish missions and training objectives. (ADP 3-0) 
+
+**Glossary-3** 
+
+**31 July 2019** 
+
+**ADP 1-01** 
+
+This page intentionally left blank. 
+
+### **References** 
+
+All websites accessed on 17 July 2019. 
+
+#### **REQUIRED PUBLICATIONS** 
+
+These documents must be available to intended users of this publication 
+
+_DOD Dictionary of Military and Associated Terms_ . June 2019. 
+
+ADP 1. _The Army_ . 31 July 2019. ADP 1-02. _Terms and Military Symbols_ . 14 August 2018. 
+
+#### **RELATED PUBLICATIONS** 
+
+These documents contain relevant supplemental information. 
+
+##### **JOINT AND DEPARTMENT OF DEFENSE PUBLICATIONS** 
+
+- Most joint publications and CJCS directives are available online: <u>https://www.jcs.mil/Doctrine/Joint Doctine-Pubs/. Most Department of Defense issuances are available online: https://www.esd.whs.mil/DD/. Most military standards are available online: https://assistca.dla.mil.</u> 
+
+CJCSI 5120.02D. _Joint Doctrine Development System_ . 05 January 2015. 
+
+CJCSM 5120.01A. _Joint Doctrine Development Process_ . 29 December 2014. 
+
+DODD 5100.01. _Functions of the Department of Defense and Its Major Components_ . 21 December 2010. 
+
+JP 1. _Doctrine for the Armed Forces of the United States_ . 25 March 2013. 
+
+JP 3-0. _Joint Operations_ . 17 January 2017 
+
+JP 3-16. _Multinational Operations_ . 01 March 2019. 
+
+JP 3-31. _Joint Land Operations_ . 24 February 2014. 
+
+JP 5-0. _Joint Planning_ . 16 June 2017. 
+
+MIL-STD-2525D. _Department of Defense Interface Standard: Joint Military Symbology_ . 10 June 2014. 
+
+##### **ARMY PUBLICATIONS** 
+
+Most Army doctrinal publications are available online: https://armypubs.army.mil/. ADP 3-0. _Operations_ . 31 July 2019. 
+
+ADP 5-0. _The Operations Process_ . 31 July 2019. 
+
+ADP 6-0. _Mission Command: Command and Control of Army Forces_ . 31 July 2019. 
+
+FM 3-0. _Operations_ . 06 October 2017. 
+
+FM 27-10. _The Law of Land Warfare_ . 18 July 1956. 
+
+**References-1** 
+
+**31 July 2019** 
+
+**ADP 1-01** 
+
+**References** 
+
+##### **OBSOLETE PUBLICATIONS** 
+
+This section contains references to obsolete historical doctrine. The Archival and Special Collections in the Combined Arms Research Library (CARL), Fort Leavenworth, Kansas contains copies. These publications are obsolete doctrine publications referenced for citations only. 
+
+_Field Service Regulations_ . Washington, DC: Government Printing Office, 1905. 
+
+_Field Service Regulations_ . Washington, DC: Government Printing Office, 1914. 
+
+_Field Service Regulations_ . Washington, DC: Government Printing Office, 1923. 
+
+- FM 100-5. _Field Service Regulations: Operations_ . Washington, DC: Government Printing Office, 1949. 
+
+- FM 100-5. _Field Service Regulations: Operations_ . Washington, DC: Government Printing Office, 1954. 
+
+- FM 110-5. _Joint Action Armed Forces_ . Washington, DC: Government Printing Office, 1951. 
+
+##### **OTHER PUBLICATIONS** 
+
+Clausewitz, Carl von. _On War_ . Edited by Michael Howard and Peter Paret. Princeton, NJ: Princeton University Press, 1984. 
+
+- Fuller, J. F. C. _The Foundations of the Science of War_ . Fort Leavenworth, KS: U.S. Army Command and General Staff College Press, 1993. 
+
+- Howard, Michael. “Military Science in the Age of Peace.” _The RUSI Journal,_ 119, No. 3 (March 1974): 3–11. 
+
+Hart, Basil Liddell. _The Liddell Hart Memoirs,_ Volume I. London: Cassell and Company, LTD, 1965. 
+
+Merriam-Webster Online Dictionary. 2015. https://www.merriam-webster.com. 
+
+Title 10, United States Code. _Armed Forces_ . http://uscode.house.gov/. 
+
+Steuben, Friedrich von. _Regulations for the Order and Discipline of the Troops of the United States_ . Philadelphia, PA: Styner and Cist, 1779. 
+
+Storr, Jim. _The Human Face of War_ . New York, NY: Continuum US, 2009. 
+
+- Voltaire. _The Works of Voltaire: A Philosophical Dictionary_ , Volume XI _._ Translated by William F. Fleming. Akron, OH:  The Werner Company, 1905. 
+
+#### **WEBSITES** 
+
+Army website featuring Army guidelines at https://www.army.mil/values/. 
+
+Army Publishing Directorate website at https://armypubs.army.mil/. 
+
+Army Training Network at https://atn.army.mil/. 
+
+Center for Army Lessons Learned website at https://usacac.army.mil/organizations/mccoe/call. 
+
+#### **PRESCRIBED FORMS** 
+
+This section contains no entries. 
+
+#### **REFERENCED FORMS** 
+
+Unless otherwise indicated, DA forms are available on the Army Publishing Directorate website at <u>https://armypubs.army.mil/.</u> 
+
+DA Form 2028. _Recommended Changes to Publications and Blank Forms_ . 
+
+**References-2** 
+
+**ADP 1-01** 
+
+**31 July 2019** 
+
+**ADP 1-01** 
+
+### **31 July 2019** 
+
+�������������������������������������� 
+
+##### **��������������** 
+
+_���������������������������� ��������������_ 
+
+��������� 
+
+
+
+##### **KATHLEEN S. MILLER** 
+
+_Administrative Assistant_ 
+
+_to the Secretary of the Army_ 1919909 
+
+##### **DISTRIBUTION:** 
+
+_Active Army, Army National Guard, and United States Army Reserve:_ ��� ��� �istributed in ������������������������������������������������������116060��������������������DP 1-01� 
+
+
+
+<!-- Start of picture text -->
+PIN: 104600-000<br><!-- End of picture text -->
+

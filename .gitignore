@@ -7,3 +7,9 @@ __pycache__/
 # Source PDFs are re-fetchable from the Google Drive DatasetPdf folder;
 # don't bloat the repo with raw binaries.
 data/raw_pdfs/*.pdf
+
+# Partial embedding-model staging dir (config/tokenizer files only -- the
+# actual weight files could not be downloaded in this environment, see
+# eval/embedding_eval.md "What was planned vs. what could be executed").
+# Not a deliverable, just scratch state from the attempt.
+eval/models/
