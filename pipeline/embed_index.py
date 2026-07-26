@@ -94,11 +94,13 @@ def build_dense_index(chunks: list[dict], chroma_dir: Path, batch_size: int = 25
     except Exception as exc:  # pragma: no cover - import-time environment issue
         raise EmbedderUnavailable(f"required package unavailable: {exc}") from exc
 
+    local_path = Path(__file__).parent.parent / "models" / EMBED_MODEL_NAME
+    model_ref = str(local_path) if local_path.exists() else f"BAAI/{EMBED_MODEL_NAME}"
     try:
-        embedder = SentenceTransformer(EMBED_MODEL_NAME, device="cpu")
+        embedder = SentenceTransformer(model_ref, device="cpu")
     except Exception as exc:
         raise EmbedderUnavailable(
-            f"could not load embedding model {EMBED_MODEL_NAME!r}: {exc}"
+            f"could not load embedding model {model_ref!r}: {exc}"
         ) from exc
 
     chroma_dir.parent.mkdir(parents=True, exist_ok=True)

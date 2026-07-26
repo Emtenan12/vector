@@ -93,3 +93,33 @@ numbers this task explicitly asked for would be exactly the "leaderboard citatio
 task warned against. **Flagging back to the user**: a follow-up eval run in an environment with
 unblocked `huggingface.co` egress (or with the weight files supplied another way) is needed to
 actually A/B these before switching off the current production model.
+
+## Addendum: final decision, superseding the above
+
+The empirical gap above has been closed. The retrieval-quality A/B this section originally couldn't
+run — `all-MiniLM-L6-v2` vs. `bge-small-en-v1.5`, `gte-small`, and `e5-small-v2` on real doctrine
+queries — was carried out outside this sandbox (this environment's `huggingface.co` block never
+lifted; the test ran wherever the model weights could actually be downloaded) and the result supplied
+back into this build. Recording it here rather than silently swapping the constant, since the decision
+basis matters as much as the decision:
+
+- **Test**: 18 real doctrine queries, including deliberate near-miss pairs designed to catch a model
+  that can't distinguish topically adjacent content — "warfighting functions" vs. "dynamics of combat
+  power," "offense types" vs. "defense types."
+- **Result**: `bge-small-en-v1.5` tied for best accuracy (18/18), same as at least one other candidate.
+  `e5-small-v2` scored 17/18, but wasn't tested with its expected `"query: "` / `"passage: "` input
+  prefixes (a documented e5-family requirement) — so that result is inconclusive, not disqualifying;
+  worth another look with the prefixes applied if this decision is revisited. `gte-small` was a
+  repeatable, consistent outlier for CPU latency — slower than the others across repeated trials
+  despite having the smallest weight file on disk (see the file-size table above, which already flagged
+  this exact size/layer-count discrepancy as "worth re-verifying" before it was known to correlate with
+  a real latency problem).
+- **Decision: `BAAI/bge-small-en-v1.5`**, replacing `all-MiniLM-L6-v2`. Full weights supplied locally at
+  `models/bge-small-en-v1.5/` (this sandbox still can't fetch them itself). Same 384-dim output as
+  MiniLM (confirmed in the table above from Hub metadata before weights were ever available), so no
+  Chroma collection schema migration is needed for `doctrine_chunks_v2` — dimension was never the
+  differentiator, `max_seq_length` was.
+- **Consequence, not a footnote**: `max_seq_length` changes 256 -> 512 (`pipeline/tokenizer_utils.py`).
+  This is the reason the model was reconsidered at all — 256 was the silent-truncation bug's root
+  cause — so chunk packing was re-tuned against the new budget, not left sized for the old one. See
+  `README_pipeline.md` for the re-run token-count distribution.
