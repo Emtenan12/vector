@@ -1,0 +1,9 @@
+# Production pipeline dependencies -- deliberately lighter than
+# eval/requirements-eval.txt, which also pins the extraction tools that
+# lost the bake-off (markitdown, docling) purely for evidence-gathering.
+pymupdf4llm==1.28.0
+langchain-text-splitters
+transformers
+sentence-transformers==5.6.1
+rank-bm25==0.2.2
+chromadb==1.5.9

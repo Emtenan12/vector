@@ -57,6 +57,45 @@ LEAK_PATTERNS = [
 
 _CID_ARTIFACT_RE = re.compile(r"\(cid:\d+\)")
 
+# Table-of-contents / front-matter navigation rows: pymupdf4llm renders a
+# PDF's ToC as a markdown table whose cells are dot-leader page references,
+# e.g. "PREFACE.................................................... iii".
+# Confirmed on ADP_1-01.pdf: this becomes one ~2500-token table block with
+# zero retrieval value (it's page navigation, not doctrine content) that
+# would otherwise dominate a chunk as a forced atomic-unit overflow. The
+# prior pipeline's own documented cleaning step explicitly dropped ToCs;
+# this reproduces that with an evidence-based detector rather than a
+# position-based guess (front matter isn't always at a fixed offset).
+_TABLE_ROW_RE = re.compile(r"^\s*\|")
+_DOT_LEADER_RE = re.compile(r"\.{4,}")
+
+
+def _strip_toc_tables(text: str) -> tuple[str, int]:
+    lines = text.split("\n")
+    out: list[str] = []
+    removed = 0
+    i = 0
+    n = len(lines)
+    while i < n:
+        if _TABLE_ROW_RE.match(lines[i]):
+            j = i
+            table_lines = []
+            while j < n and (_TABLE_ROW_RE.match(lines[j]) or lines[j].strip() == ""):
+                if _TABLE_ROW_RE.match(lines[j]):
+                    table_lines.append(lines[j])
+                j += 1
+            dot_leader_rows = sum(1 for l in table_lines if _DOT_LEADER_RE.search(l))
+            if table_lines and dot_leader_rows / len(table_lines) >= 0.5:
+                removed += 1
+                i = j
+                continue
+            out.extend(lines[i:j])
+            i = j
+            continue
+        out.append(lines[i])
+        i += 1
+    return "\n".join(out), removed
+
 
 def _pub_id_variants(doc_id: str) -> list[str]:
     """Generate regex-escaped variants of a doc's own publication ID as it
@@ -79,6 +118,7 @@ class CleanResult:
     rejoins_performed: int = 0
     leaks_removed: int = 0
     cid_artifacts_found: int = 0
+    toc_tables_removed: int = 0
 
 
 def _is_noise_line(stripped: str, pub_id_patterns: list[re.Pattern],
@@ -200,6 +240,9 @@ def clean_text(raw_text: str, doc_id: str) -> CleanResult:
             )
             leaks_removed += 1
 
+    text, toc_removed = _strip_toc_tables(text)
+    text = re.sub(r"\n{3,}", "\n\n", text)
+
     cid_count = len(_CID_ARTIFACT_RE.findall(text))
 
     return CleanResult(
@@ -208,6 +251,7 @@ def clean_text(raw_text: str, doc_id: str) -> CleanResult:
         rejoins_performed=rejoins,
         leaks_removed=leaks_removed,
         cid_artifacts_found=cid_count,
+        toc_tables_removed=toc_removed,
     )
 
 

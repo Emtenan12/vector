@@ -61,31 +61,65 @@ class ChunkResult:
         return self.chunk_chars / self.source_chars
 
 
-def _split_paragraphs(text: str) -> list[str]:
-    return [p for p in re.split(r"\n\s*\n", text.strip()) if p.strip()]
+_TABLE_LINE_RE = re.compile(r"^\s*\|")
 
 
-def _group_atomic_units(paragraphs: list[str]) -> list[str]:
-    """Merge a paragraph with any immediately-following list block(s) into
-    one atomic unit, so a heading's lead-in is never separated from its
-    enumeration. A run of consecutive list-block paragraphs also merges
-    together (a list split across paragraph boundaries by clean.py's
-    noise-rejoin stays one unit)."""
-    units: list[str] = []
-    i = 0
-    n = len(paragraphs)
-    while i < n:
-        current = paragraphs[i]
-        j = i + 1
-        # Absorb any immediately-following paragraphs that are themselves
-        # list blocks (a lead-in paragraph followed by one or more list
-        # paragraphs, or a list continuing after a page-break rejoin).
-        while j < n and _LIST_LINE_RE.match(paragraphs[j].lstrip().splitlines()[0]):
-            current = current + "\n\n" + paragraphs[j]
-            j += 1
-        units.append(current)
-        i = j
-    return units
+def _line_type(line: str) -> str:
+    s = line.strip()
+    if not s:
+        return "blank"
+    if s.startswith("#"):
+        return "heading"
+    if _LIST_LINE_RE.match(s):
+        return "list"
+    if _TABLE_LINE_RE.match(s):
+        return "table"
+    return "prose"
+
+
+def _split_blocks(text: str) -> list[str]:
+    """Segment cleaned markdown into blocks by type transition, not just
+    blank lines -- pymupdf4llm sometimes emits a narrative paragraph, a
+    bullet list, and a table back-to-back with only single newlines (no
+    blank-line separator), which a pure blank-line split would collapse
+    into one unsplittable multi-thousand-token blob (confirmed on
+    ADP_6-0.pdf's front-matter "Introduction" section). A prose block
+    immediately followed by a list block is kept together (a heading's
+    lead-in paragraph must not be separated from its enumeration); every
+    other type transition -- including list-to-table, table-to-prose, and
+    anything-to-heading -- always starts a new block."""
+    lines = text.split("\n")
+    blocks: list[str] = []
+    current: list[str] = []
+    current_type: str | None = None
+
+    for line in lines:
+        t = _line_type(line)
+        if t == "blank":
+            if current:
+                blocks.append("\n".join(current))
+                current = []
+                current_type = None
+            continue
+        if current_type is None:
+            current = [line]
+            current_type = t
+        elif t == current_type:
+            current.append(line)
+        elif current_type == "prose" and t == "list":
+            # Lead-in paragraph glued to its list: keep accumulating, but
+            # the block is now "list"-typed so prose resuming afterward
+            # (rare without a blank line) still starts a fresh block.
+            current.append(line)
+            current_type = "list"
+        else:
+            blocks.append("\n".join(current))
+            current = [line]
+            current_type = t
+
+    if current:
+        blocks.append("\n".join(current))
+    return [b for b in blocks if b.strip()]
 
 
 _SENTENCE_SPLIT_RE = re.compile(r"(?<=[.!?])\s+(?=[A-Z\"'‘’“”(])")
@@ -93,6 +127,10 @@ _SENTENCE_SPLIT_RE = re.compile(r"(?<=[.!?])\s+(?=[A-Z\"'‘’“”(])")
 
 def _contains_list(unit: str) -> bool:
     return any(_LIST_LINE_RE.match(line.lstrip()) for line in unit.splitlines())
+
+
+def _contains_table(unit: str) -> bool:
+    return any(_TABLE_LINE_RE.match(line) for line in unit.splitlines())
 
 
 def _split_oversized_unit(unit: str, max_tokens: int) -> list[str]:
@@ -142,7 +180,7 @@ def _pack_units(units: list[str], max_tokens: int) -> list[tuple[str, int]]:
         unit_tokens = count_tokens(unit)
         if unit_tokens > max_tokens:
             flush()
-            if _contains_list(unit):
+            if _contains_list(unit) or _contains_table(unit):
                 packed.append((unit, unit_tokens))  # oversized, logged by caller
                 continue
             for piece in _split_oversized_unit(unit, max_tokens):
@@ -183,11 +221,11 @@ def chunk_document(
         for level in ("h6", "h5", "h4", "h3", "h2", "h1"):
             if level in section.metadata:
                 heading = section.metadata[level]
-        if heading and not section_text.lstrip().startswith(heading):
+        first_line_stripped = section_text.lstrip().splitlines()[0].lstrip("#").strip()
+        if heading and heading.strip() != first_line_stripped:
             section_text = f"{heading}\n\n{section_text}"
 
-        paragraphs = _split_paragraphs(section_text)
-        units = _group_atomic_units(paragraphs)
+        units = _split_blocks(section_text)
         packed = _pack_units(units, max_tokens)
 
         for text, tokens in packed:
