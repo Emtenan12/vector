@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+
+# Source PDFs are re-fetchable from the Google Drive DatasetPdf folder;
+# don't bloat the repo with raw binaries.
+data/raw_pdfs/*.pdf
