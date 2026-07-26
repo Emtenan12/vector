@@ -171,23 +171,102 @@ check on every new document/tool, since it's a per-tool behavior, not a guarante
   set. `ADP_5-0.pdf` specifically is required for the MDMP 7-step-list regression test, which is
   correctly reported as **skipped** (not failed) by `pipeline/validate.py` until that file is available.
 
+### 11. A document can be 97% garbage and still pass every volume-based gate
+
+`ADP_2-0.pdf` (88 pages, Adobe InDesign → Acrobat Distiller) has fonts with a broken/absent
+ToUnicode map. Extractors map the unmapped glyphs to U+FFFD, so the whole document came out as
+replacement characters — **and it passed content-preservation, doc_id, and leak checks**, because the
+*volume* of text was right; it was just unreadable. 179 chunks of pure noise would have been embedded
+into the index. The information is not actually lost at the PDF level: extracting with
+`TEXTFLAGS_DICT` preserves the raw glyph codes (`&KDSWHU\x03\x14` → `Chapter 1`), which decode by
+adding a constant offset — **29 (0x1D)** for this document. `pipeline/repair_extract.py` detects this
+and takes a repair path; ADP_2-0 now yields 228 clean chunks.
+
+Three things that matter if you hit this again:
+- **The shift is per-span, not per-document.** ADP_2-0 mixes correctly-encoded spans (italic
+  defined-term runs) with shifted ones *on the same line*. Decoding blindly corrupts the good spans
+  (`Defense support of civil authorities` → `=aefense=support=of=civil=authorities`). Gate the decode
+  on the span actually containing control characters, which never occur in legitimate text.
+- **Detect on damage, not on presence.** A first cut that triggered on *any* control character
+  false-positived on ADP_1-01 and ADP_1 — healthy documents that then lost pymupdf4llm's page-break
+  noise patterns (`noise_removed` silently dropped to 0). Measured control-char density cleanly
+  separates them: every healthy ADP ≤0.2%, ADP_2-0 at 16%. Threshold set at 5%.
+- **pymupdf4llm's own escape hatch doesn't work here.** `use_glyphs=True` is documented for exactly
+  this case but doesn't wire through in 1.28.0, and patching `TextPage.extractDICT`/`extractRAWDICT`
+  doesn't intercept it either — hence the standalone repair module.
+
+`pipeline/validate.py` now gates on per-document replacement-char ratio so this can never pass
+silently again. A corpus-wide count would not have caught it — 14 healthy documents dilute one bad one.
+
+### 12. A corrupted heading propagates far beyond its own line
+
+On ADP_5-0, the running date/page field fails to decode and pymupdf4llm promotes it (large + bold) to
+a markdown *heading*. Because it carries a `#`, it is exempt from the bold-noise-line rule — and
+`chunk.py`'s `MarkdownHeaderTextSplitter` then adopts it as a section heading and prepends it as a
+breadcrumb to **every chunk beneath it** (312 chunks). Deleting such headings outright made things
+*worse*: the splitter fell back to a partially-corrupted parent heading and propagated that instead
+(8,787 → 23,116 replacement chars corpus-wide). What works is stripping the replacement-character
+runs themselves and tidying the empty markup shells left behind — the characters are unrecoverable by
+that stage, so they can only add noise to an embedding. Corpus is now at **zero** replacement
+characters.
+
+### 13. A source file can be real, correctly sized, and still contain nothing
+
+`ADP-7-0.pdf` (11.29MB, 36 pages) yields **zero** extractable characters — no text layer at all, only
+11 images, and 29 of its 36 pages are completely blank. Producer metadata says `Microsoft: Print To
+PDF` over a file named `U_ISES-PAI_ADP_7-0_WEB_FINAL_20240429.pdf`. The real ADP 7-0 (Training) is
+100+ pages of doctrine, so this file is not a usable copy of it regardless of OCR. It needs a
+replacement source. `validate.py` now has a zero-chunk gate so an empty extraction fails loudly
+instead of being mistaken for a document that simply wasn't in the run.
+
 ## Regression tests (`pipeline/validate.py`)
 
 | Test | Doc | Status this build |
 |---|---|---|
-| Mission command 7 principles land in one chunk | ADP 6-0 | **PASS** (7/7, chunk `ADP_6-0__000034`) |
-| MDMP 7-step list lands in one chunk | ADP 5-0 | **SKIPPED** — source PDF not downloadable this session |
+| Mission command 7 principles land in one chunk | ADP 6-0 | **PASS** (7/7, chunk `ADP_6-0__000022`) |
+| MDMP 7-step list lands in one chunk | ADP 5-0 | **PASS** (7/7, chunk `ADP_5-0__000125`) |
+
+The MDMP test failed 3/7 on its first-ever run — but the chunker was correct and the *test* was wrong:
+ADP 5-0 writes steps 3–6 as "COA development/analysis/comparison/approval", while the needles used the
+spelled-out "course of action …". Needles now accept multiple surface forms per item. This is the same
+class of bug as the curly-apostrophe mismatch in #7 — when a regression test fails, check the needle
+against the real source text before concluding the pipeline is broken.
+
+## Final build state
+
+| | |
+|---|---|
+| Documents indexed | **15 of 16** ADP publications |
+| Chunks | **4,032** |
+| Embedding model | `BAAI/bge-small-en-v1.5`, 384-dim, `max_seq_length` **512** (verified by loading the model, not assumed) |
+| Dense index | ChromaDB `doctrine_chunks_v2`, cosine — built, 4,032 vectors (3m11s, CPU) |
+| Sparse index | BM25Okapi + `chunk_lookup.pkl`, tokenizer copied verbatim from `hybrid_retrieval.py` |
+| Validation | 21 passed, 2 failed (both the same known-bad source file), 0 skipped |
+| Replacement chars | **0** corpus-wide |
+| Over-budget chunks | 99 (2.5%) — all logged unsplittable lists/tables, never silently truncated |
+
+Embedding dimension is 384, unchanged from `all-MiniLM-L6-v2`, so **no `doctrine_chunks_v2` schema
+migration is needed** — confirmed by loading the model, not inferred.
+
+Retrieval spot-check against the live dense index returns the correct chunk at rank 1 for
+"seven steps of the military decision-making process" (ADP_5-0), "principles of mission command"
+(ADP_6-0), and "intelligence warfighting function" (ADP_3-0). Note that bge models expect the
+instruction prefix `"Represent this sentence for searching relevant passages: "` on the **query**
+side only — passages are embedded bare, as done here.
 
 ## Known gaps / next steps for whoever picks this up
 
-1. Get `ADP_1.pdf`, `ADP_2-0.pdf`, `ADP_5-0.pdf`, `ADP-7-0.pdf` onto disk (retry the Drive connector
-   later, or supply them another way) and re-run `run_pipeline.py` + `validate.py` to complete the
-   16-doc ADP set and unlock the MDMP regression test.
-2. Build the dense ChromaDB index in an environment with working Hugging Face Hub access.
-3. Re-run `eval/run_embedding_eval.py`'s latency/retrieval-quality legs once model weights are
-   available, to actually validate (not just architecturally justify) the `all-MiniLM-L6-v2` choice
-   against the 512-token alternatives (`bge-small-en-v1.5`, `gte-small`, `e5-small-v2`).
-4. Confirm the iWave G35D-19EG hardware specs (4GB DDR4 ECC, Cortex-A53 quad @1.5GHz) against official
+1. **`ADP-7-0.pdf` needs a replacement source file** — the supplied copy has no text layer and is
+   mostly blank pages (artifact pattern #13). This is the only reason the corpus is 15/16 rather than
+   16/16, and it is a bad-input problem, not a pipeline problem. Both remaining validator failures
+   trace to this one file.
+2. `e5-small-v2` was scored 17/18 in the embedding A/B **without** its expected `"query: "` /
+   `"passage: "` prefixes, so that number is inconclusive rather than disqualifying. Worth re-testing
+   with the prefixes applied if the model choice is ever revisited.
+3. Confirm the iWave G35D-19EG hardware specs (4GB DDR4 ECC, Cortex-A53 quad @1.5GHz) against official
    documentation — they were treated as unverified throughout this build per the task's own flag.
-5. ATP corpus (264 docs) is explicitly out of scope for this build; validate a stratified sample by
+   The embedder's real footprint is now known: 127MB weights on disk, 384-dim vectors.
+4. ATP corpus (264 docs) is explicitly out of scope for this build; validate a stratified sample by
    extraction-quality metrics before assuming the ADP-derived pipeline generalizes uniformly to it.
+   Artifact patterns #11–13 are the ones most likely to recur at that scale, and the validator now
+   gates on all three.

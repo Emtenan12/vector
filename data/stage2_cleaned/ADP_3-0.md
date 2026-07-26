@@ -463,37 +463,37 @@ This chapter defines the six warfighting functions and discusses how they genera
 
 - Execute fires across the five domains employing— 
 
-   - Surface-to-surface fires. 
+ - Surface-to-surface fires. 
 
-   - Air-to-surface fires. 
+ - Air-to-surface fires. 
 
-   - Surface-to-air fires. 
+ - Surface-to-air fires. 
 
-   - Cyberspace operations and electromagnetic warfare. 
+ - Cyberspace operations and electromagnetic warfare. 
 
-   - Space operations. 
+ - Space operations. 
 
-   - Multinational fires. 
+ - Multinational fires. 
 
-   - Special operations. 
+ - Special operations. 
 
 - Integrate Army, multinational, and joint fires through— 
 
-   - Targeting. 
+ - Targeting. 
 
-   - Operations process. 
+ - Operations process. 
 
-   - Fire support planning. 
+ - Fire support planning. 
 
-   - Airspace planning and management. 
+ - Airspace planning and management. 
 
-   - Electromagnetic spectrum management. 
+ - Electromagnetic spectrum management. 
 
-   - Multinational integration. 
+ - Multinational integration. 
 
-   - Rehearsals. 
+ - Rehearsals. 
 
-   - Air and missile defense planning and integration. 
+ - Air and missile defense planning and integration. 
 
 (See ADP 3-19 for additional information on the fires warfighting function.) 
 
@@ -709,7 +709,7 @@ Agility is critical to protection, and it enables speed during large-scale comba
 
 ### **CONVERGENCE** 
 
-3-15. Peer threats employ adaptable and durable capabilities. Their formations can cover large geographic areas and multiple domains. They cannot be easily defeated in a single, decisive effort. Success requires Army forces to sustain attacks against multiple decisive points over time through convergence **.** **_Convergence_ is an outcome created by the concerted employment of capabilities against combinations of decisive points in any domain to create effects against a system, formation, or decision maker, or in a specific geographic area.** Senior Army tactical echelons drive convergence from the top down. Senior Army tactical echelons are informed by the larger land tactical situation, and they have access to and can direct multinational, joint, and Army capabilities. 
+3-15. Peer threats employ adaptable and durable capabilities. Their formations can cover large geographic areas and multiple domains. They cannot be easily defeated in a single, decisive effort. Success requires Army forces to sustain attacks against multiple decisive points over time through convergence **._Convergence_ is an outcome created by the concerted employment of capabilities against combinations of decisive points in any domain to create effects against a system, formation, or decision maker, or in a specific geographic area.** Senior Army tactical echelons drive convergence from the top down. Senior Army tactical echelons are informed by the larger land tactical situation, and they have access to and can direct multinational, joint, and Army capabilities. 
 
 3-16. Convergence involves integrating Army and joint capabilities at the most effective echelon and synchronizing their employment against decisive points to create effects that friendly forces can exploit through maneuver. Convergence employs mass at multiple locations in different domains in an economical way that avoids confronting enemy strengths head on. Commanders choose combinations of decisive points against which to mass effects, based on what most enables the enemy’s preferred tactical or operational approach. Commanders visualize decisive points across multiple domains and dimensions. Categories of decisive points include— 
 

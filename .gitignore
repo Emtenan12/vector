@@ -13,3 +13,14 @@ data/raw_pdfs/*.pdf
 # eval/embedding_eval.md "What was planned vs. what could be executed").
 # Not a deliverable, just scratch state from the attempt.
 eval/models/
+
+# Real bge-small-en-v1.5 weights (127MB model.safetensors). Supplied out of
+# band; model.safetensors alone exceeds GitHub's 100MB per-file hard limit,
+# so it cannot be committed here without LFS. See README_pipeline.md for
+# where to place it.
+models/
+
+# Dense vector store: a 52MB binary SQLite artifact rewritten wholesale on
+# every rebuild. Regenerate with pipeline/embed_index.py rather than
+# versioning it -- the chunk JSONL it is built from IS committed.
+data/indexes/chroma_db/

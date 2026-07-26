@@ -121,6 +121,21 @@ class CleanResult:
     toc_tables_removed: int = 0
 
 
+# Runs of replacement characters, left by a font whose ToUnicode map failed
+# on part of a line (confirmed on ADP_5-0's running header/date field, which
+# pymupdf4llm promotes to a markdown heading -- so it survives the bold-noise
+# rule, carries no readable text, and gets adopted as a section heading whose
+# breadcrumb is then prepended to every chunk beneath it). Deleting these
+# runs outright is safe: the characters are already unrecoverable at this
+# stage, so they can only add noise to an embedding.
+#
+# Deliberately NOT handled by dropping such headings entirely -- tried that,
+# and it was worse: the splitter then fell back to a partially-corrupted
+# parent heading and propagated it to more chunks (8,787 -> 23,116
+# replacement chars corpus-wide).
+_REPL_RUN_RE = re.compile(r"�+")
+
+
 def _is_noise_line(stripped: str, pub_id_patterns: list[re.Pattern],
                     running_title_counts: dict[str, int]) -> bool:
     m = _BOLD_LINE_RE.match(stripped)
@@ -130,6 +145,13 @@ def _is_noise_line(stripped: str, pub_id_patterns: list[re.Pattern],
     if _PAGE_NUM_RE.match(content):
         return True
     if _DATE_RE.match(content):
+        return True
+    # A bold line that is nothing but replacement characters is a running
+    # header whose font failed to decode (confirmed on ADP_5-0: the date
+    # field renders as "**??????? 2019**" and the page-id field as pure
+    # replacement chars). It carries no content, and left in place it
+    # becomes the opening line of the chunk that follows it.
+    if content and all(c == "�" or c.isspace() for c in content):
         return True
     for pat in pub_id_patterns:
         if pat.match(content):
@@ -241,6 +263,13 @@ def clean_text(raw_text: str, doc_id: str) -> CleanResult:
             leaks_removed += 1
 
     text, toc_removed = _strip_toc_tables(text)
+
+    # Drop unrecoverable replacement-character runs, then tidy the empty
+    # markup shells they leave behind (e.g. "## **** " -> removed entirely).
+    text = _REPL_RUN_RE.sub("", text)
+    text = re.sub(r"^#+\s*(?:\*\*\s*\*\*)?\s*$", "", text, flags=re.M)
+    text = re.sub(r"\*\*\s*\*\*", "", text)
+    text = re.sub(r"[ \t]{2,}", " ", text)
     text = re.sub(r"\n{3,}", "\n\n", text)
 
     cid_count = len(_CID_ARTIFACT_RE.findall(text))

@@ -80,9 +80,7 @@ Sustainment must be integrated and synchronized with operations at every level t
 
 For the purpose of this manual, the use of the terms sustainment headquarters and sustainment command refers to those organizations that provide one or more of the elements of the sustainment warfighting function. 
 
-**Introduction** 
-
-**Introductory figure-1. ADP 4-0 logic chart** **Introduction**
+**IntroductionIntroductory figure-1. ADP 4-0 logic chartIntroduction**
 
 Terms for which ADP 4-0 is the proponent are listed in introductory table-1. These terms also appear in the glossary. 
 
@@ -147,17 +145,17 @@ Health service support encompasses all support and services performed, provided,
 
 - Casualty care, which encompasses a number of medical functions, including: 
 
-   - Medical treatment (organic and area medical support). 
+ - Medical treatment (organic and area medical support). 
 
-   - Hospitalization. 
+ - Hospitalization. 
 
-   - Dental care (treatment aspects). 
+ - Dental care (treatment aspects). 
 
-   - Behavioral health/neuropsychiatric treatment. 
+ - Behavioral health/neuropsychiatric treatment. 
 
-   - Clinical laboratory services. 
+ - Clinical laboratory services. 
 
-   - Treatment of chemical, biological, radiological, and nuclear patients). 
+ - Treatment of chemical, biological, radiological, and nuclear patients). 
 
 - Medical evacuation (including medical regulating). 
 
@@ -270,7 +268,7 @@ Health service support encompasses all support and services performed, provided,
 |**_Class_**|**_Description_**|
 |---|---|
 |Class I|Subsistence,includingwater.|
-|Class II|Clothing, individual equipment, tentage, tool sets and tool kits, hand tools, administrative, and<br>housekeeping supplies and equipment (including maps). This includes items of equipment,<br>other than major items, prescribed in authorization/allowance tables and items of supply (not<br>includingrepairparts).| **Table 1-1. Classes of supply** **_(continued)_**
+|Class II|Clothing, individual equipment, tentage, tool sets and tool kits, hand tools, administrative, and<br>housekeeping supplies and equipment (including maps). This includes items of equipment,<br>other than major items, prescribed in authorization/allowance tables and items of supply (not<br>includingrepairparts).| **Table 1-1. Classes of supply_(continued)_**
 
 |**_Class_**|**_Description_**|
 |---|---|
@@ -411,21 +409,21 @@ Health service support encompasses all support and services performed, provided,
 
 1-61. Postal operations provide mail and postal finance services within the deployed area of operations (AO). Processing mail involves the following: 
 
-   - Receiving, separating, sorting, dispatching, transporting, and redirecting ordinary, official, insured, certified, return receipt, and registered mail. 
+ - Receiving, separating, sorting, dispatching, transporting, and redirecting ordinary, official, insured, certified, return receipt, and registered mail. 
 
-   - Conducting multi-national and international mail exchange. 
+ - Conducting multi-national and international mail exchange. 
 
-   - Handling official casualty, contaminated/suspicious, and detainee mail. 
+ - Handling official casualty, contaminated/suspicious, and detainee mail. 
 
 - 1-62. Postal finance services include: 
 
-   - Selling postage stamps. 
+ - Selling postage stamps. 
 
-   - Cashing and selling money orders, and mailing packages. 
+ - Cashing and selling money orders, and mailing packages. 
 
-   - Providing insured/certified mail services and registered/special services (including classified up to SECRET level). 
+ - Providing insured/certified mail services and registered/special services (including classified up to SECRET level). 
 
-   - Processing postal claims and inquiries. 
+ - Processing postal claims and inquiries. 
 
 ###### **Casualty Operations** 
 
@@ -575,15 +573,15 @@ Commanders oversee the administration of military justice in their units and com
 
 - Casualty care which encompasses a number of Army Medical Department functions, including—  Medical treatment (organic and area medical support). 
 
-   - Hospitalization. 
+ - Hospitalization. 
 
-   - Dental care (treatment aspects). 
+ - Dental care (treatment aspects). 
 
-   - Behavioral health/ neuropsychiatric treatment. 
+ - Behavioral health/ neuropsychiatric treatment. 
 
-   - Clinical laboratory services. 
+ - Clinical laboratory services. 
 
-   - Treatment of chemical, biological, radiological, and nuclear patients. 
+ - Treatment of chemical, biological, radiological, and nuclear patients. 
 
 - Medical evacuation (including medical regulating). 
 
@@ -1277,7 +1275,7 @@ _Unified land operations_ is the simultaneous execution of offense, defense, sta
 
 ##### **SUSTAINMENT PREPARATION OF THE OPERATIONAL ENVIRONMENT** 
 
-3-63. **_Sustainment preparation_ o** **_f the operational environment_ is the analysis to determine infrastructure, physical environment, and resources in the operational environment that will optimize or adversely impact friendly forces means for supporting and sustaining the commander’s operations plan** . The sustainment preparation of the operational environment assists planning staffs to refine the sustainment estimate and concept of support. It identifies friendly resources (HNS, contractible, or accessible assets) or environmental factors (endemic diseases, climate) that impact sustainment. 
+3-63. **_Sustainment preparation_ o_f the operational environment_ is the analysis to determine infrastructure, physical environment, and resources in the operational environment that will optimize or adversely impact friendly forces means for supporting and sustaining the commander’s operations plan** . The sustainment preparation of the operational environment assists planning staffs to refine the sustainment estimate and concept of support. It identifies friendly resources (HNS, contractible, or accessible assets) or environmental factors (endemic diseases, climate) that impact sustainment. 
 
 3-64. Some of the factors considered (not all-inclusive) are as follows: 
 
@@ -1800,7 +1798,7 @@ Most Army doctrinal publications are available online at https://armypubs.army.m
 
 ADP 3-07. _Stability_ . 31 July 2019. 
 
-**References-1** **References**
+**References-1References**
 
 ADP 3-37. _Protection_ . 31 July 2019. ADP 5-0. _The Operations Proces_ s. 31 July 2019. ADP 6-0. _Mission Command: Command and Control of Army Forces_ . 31 July 2019. AR 25-22. _The Army Privacy Program_ . 22 December 2016. AR 30-22. _Army Food Program_ . 24 July 2012. ATP 1-05.03. _Religious Support and External Advisement._ 31 January 2019. ATP 1-05.04. _Religious Support and Internal Advisement._ 23 March 2017. ATP 1-19. _Army Music_ . 13 February 2015. ATP 3-34.40. _General Engineering._ 25 February 2015. ATP 3-35. _Army Deployment and Redeployment_ . 23 March 2015. ATP 3-35.1. _Army Pre-Positioned Operations_ . 27 October 2015. ATP 3-37.10. _Base Camps._ 27 January 2017. ATP 4-0.1. _Army Theater Distribution._ 29 October 2014. ATP 4-02.1. _Army Medical Logistics_ . 29 October 2015. ATP 4-02.2. _Medical Evacuation_ . 11 July 2019. ATP 4-02.7. _Multi-Service Tactics, Techniques, and Procedures for Health Service Support in a Chemical, Biological, Radiological, and Nuclear Environment_ . 15 March 2016. 
 
@@ -1812,7 +1810,7 @@ ATP 4-12. _Army Container Operations_ . 10 May 2013.
 
 ATP 4-13. _Army Expeditionary Intermodal Operations_ . 16 April 2014. ATP 4-16. _Movement Control_ . 5 April 2013. ATP 4-33. _Maintenance Operations_ . 9 July 2019. ATP 4-41. _Army Field Feeding and Class I Operations_ . 31 December 2015. ATP 4-42. _General Supply and Field Service Operations_ . 14 July 2014. ATP 4-45. _Force Provider Operations_ . 24 November 2014. ATP 4-46. _Contingency Fatality Operations_ . 17 December 2014. ATP 4-48. _Aerial Delivery_ . 21 December 2016. ATP 4-90. _Brigade Support Battalion_ . 2 April 2014. ATP 4-91. _Army Field Support Brigade_ . 15 December 2011. ATP 4-92. _Contracting Support to Unified Land Operations_ . 15 October 2014. ATP 4-93. _Sustainment Brigade_ . 11 April 2016. ATP 4-94. _Theater Sustainment Command_ . 28 June 2013. FM 1-0. _Human Resources Support_ . 1 April 2014. FM 1-04. _Legal Support to the Operational Army_ . 18 March 2013. FM 1-05. _Religious Support._ 21 January 2019. FM 1-06. _Financial Management Operations_ . 15 April 2014. FM 2-0. _Intelligence_ . 6 July 2018. FM 3-0. _Operations_ . 6 October 2017. FM 3-04. _Army Aviation_ . 29 July 2015. FM 3-05. _Army Special Operations_ . 9 January 2014. FM 3-34. _Engineer Operations_ . 2 April 2014. FM 4-0, _Sustainment Operations_ . 31 July 2019. FM 4-02. _Army Health System_ . 26 August 2013. FM 4-30. _Ordnance Operations_ . 1 April 2014. 
 
-**References-2** **References**
+**References-2References**
 
 FM 4-95. _Logistics Operations_ . 1 April 2014. 
 
@@ -1866,7 +1864,7 @@ Army field support brigade, 2-37 Army health system, 1-4, 1-100 Army Service Com
 
 ###### **B** 
 
-band support, 1-90, 1-93 basing, 3-49 brigade combat team, 1-19,  2-70 brigade support battalion, 2-70 
+band support, 1-90, 1-93 basing, 3-49 brigade combat team, 1-19, 2-70 brigade support battalion, 2-70 
 
 ###### **C** 
 
@@ -1926,13 +1924,11 @@ This page intentionally left blank.
 
 ### **31 July 2019** 
 
-�������������������������������������� 
+ 
 
-##### **��������������** 
+_ _ 
 
-_���������������������������� ��������������_ 
-
-��������� 
+ 
 
 ##### **KATHLEEN S. MILLER** 
 
@@ -1942,7 +1938,7 @@ _to the Secretary of the Army_ 1922003
 
 ##### **DISTRIBUTION:** 
 
-_Active Army, Army National Guard, and United States Army Reserve:_ ��� ��� �istributed in ������������������������������������������������������110512��������������������DP�4-0� 
+_Active Army, Army National Guard, and United States Army Reserve:_ istributed in 110512DP4-0 
 
 <!-- Start of picture text -->
 PIN: 102981-000<br><!-- End of picture text -->

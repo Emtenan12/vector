@@ -99,6 +99,7 @@ def main():
                 report["toc_tables_removed"], report["cid_artifacts_found"],
                 report["leaks_removed"],
             )
+            report["chunks_count"] = len(report["chunks"])
             report.pop("chunks")  # keep the summary report light
             all_reports.append(report)
 

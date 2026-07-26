@@ -27,24 +27,39 @@ from pipeline.tokenizer_utils import EMBED_MODEL_MAX_SEQ_LENGTH, count_tokens
 
 DOC_ID_RE_ADP_ATP = __import__("re").compile(r"^(ADP|ATP)_[\w.-]+$")
 
+# Each "needle" is a list of accepted surface forms; a needle counts as
+# matched if ANY of its forms appears. Real doctrine text abbreviates
+# inconsistently -- ADP 5-0 writes the MDMP steps as "COA development"
+# etc., not the spelled-out "course of action development" -- so a
+# single-form needle reports a false failure against correctly-chunked
+# text. (Confirmed: chunk ADP_5-0__000124 holds all 7 steps intact, but
+# scored 3/7 against spelled-out-only needles.)
 REGRESSION_TESTS = [
     {
         "name": "ADP 5-0 MDMP 7-step list",
         "doc_id_prefix": "ADP_5-0",
         "needles": [
-            "receipt of mission", "mission analysis", "course of action development",
-            "course of action analysis", "course of action comparison",
-            "course of action approval", "orders production",
+            ["receipt of mission"],
+            ["mission analysis"],
+            ["coa development", "course of action development"],
+            ["coa analysis", "course of action analysis"],
+            ["coa comparison", "course of action comparison"],
+            ["coa approval", "course of action approval"],
+            ["orders production"],
         ],
-        "min_needles": 6,  # allow one miss for wording drift, still must be substantially intact
+        "min_needles": 7,
     },
     {
         "name": "ADP 6-0 mission command 7 principles",
         "doc_id_prefix": "ADP_6-0",
         "needles": [
-            "competence", "mutual trust", "shared understanding",
-            "commander's intent", "mission orders", "disciplined initiative",
-            "risk acceptance",
+            ["competence"],
+            ["mutual trust"],
+            ["shared understanding"],
+            ["commander's intent"],
+            ["mission orders"],
+            ["disciplined initiative"],
+            ["risk acceptance"],
         ],
         "min_needles": 7,
     },
@@ -95,6 +110,53 @@ def check_artifacts(chunks: list[dict]) -> dict:
     }
 
 
+def check_encoding_corruption(chunks: list[dict], max_ratio: float = 0.02) -> dict:
+    """Fail any document whose chunks are substantially U+FFFD replacement
+    characters. Added after ADP_2-0.pdf came through 97% replacement chars
+    (broken font ToUnicode map) and still passed every other gate --
+    preservation ratio was fine because the *volume* of text was right, it
+    was just unreadable. A per-document ratio catches that; a corpus-wide
+    count would be diluted by the 14 healthy documents."""
+    per_doc: dict[str, list[int]] = {}
+    for c in chunks:
+        stats = per_doc.setdefault(c["doc_id"], [0, 0])
+        stats[0] += c["text"].count("�")
+        stats[1] += len(c["text"])
+
+    failures = []
+    for doc_id, (bad, total) in sorted(per_doc.items()):
+        ratio = bad / total if total else 0.0
+        if ratio > max_ratio:
+            failures.append((doc_id, ratio))
+
+    return {
+        "check": "encoding_corruption",
+        "pass": not failures,
+        "detail": (
+            "; ".join(f"{d}: {r*100:.1f}% replacement chars" for d, r in failures)
+            if failures else
+            f"all {len(per_doc)} documents under {max_ratio*100:.0f}% replacement chars"
+        ),
+    }
+
+
+def check_empty_documents(per_doc_report: list[dict]) -> dict:
+    """Fail any document that produced zero chunks -- an extraction that
+    silently yields nothing (e.g. a scanned PDF with no text layer, as with
+    ADP-7-0.pdf) must not be mistaken for a document that simply wasn't
+    included in the run."""
+    empties = [d["doc_id"] for d in per_doc_report if d.get("chunks_count", 0) == 0]
+    return {
+        "check": "no_empty_documents",
+        "pass": not empties,
+        "detail": (
+            f"{len(empties)} document(s) produced ZERO chunks: {empties} "
+            f"-- no extractable text layer (needs OCR or a replacement source file)"
+            if empties else "every document produced at least one chunk"
+        ),
+    }
+
+
 def check_doc_id_consistency(chunks: list[dict]) -> dict:
     bad = sorted({c["doc_id"] for c in chunks if not DOC_ID_RE_ADP_ATP.match(c["doc_id"])})
     return {
@@ -121,7 +183,7 @@ def check_regression_enumerations(chunks: list[dict]) -> list[dict]:
         best_hits = 0
         for c in candidates:
             low = _normalize_quotes(c["text"].lower())
-            hits = sum(1 for n in test["needles"] if n in low)
+            hits = sum(1 for forms in test["needles"] if any(f in low for f in forms))
             if hits > best_hits:
                 best_hits = hits
                 best_chunk = c["chunk_id"]
@@ -193,6 +255,19 @@ def generate_report(jsonl_path: Path, report_json_path: Path | None = None) -> s
     all_results.append(r)
     lines.append(f"  [{'PASS' if r['pass'] else 'FAIL'}] {r['detail']}")
     lines.append("")
+
+    lines.append("## 3b. Font-encoding corruption (per document)")
+    r = check_encoding_corruption(chunks)
+    all_results.append(r)
+    lines.append(f"  [{'PASS' if r['pass'] else 'FAIL'}] {r['detail']}")
+    lines.append("")
+
+    if per_doc_report:
+        lines.append("## 3c. Zero-chunk documents")
+        r = check_empty_documents(per_doc_report)
+        all_results.append(r)
+        lines.append(f"  [{'PASS' if r['pass'] else 'FAIL'}] {r['detail']}")
+        lines.append("")
 
     lines.append("## 4. Known-enumeration regression tests")
     for r in check_regression_enumerations(chunks):
