@@ -26,6 +26,70 @@ python -c "from pathlib import Path; from pipeline.embed_index import build_all_
            build_all_indexes(Path('data/stage3_chunks/ADP_Cleaned.jsonl'), Path('data/indexes'))"
 ```
 
+## Fetching the embedding model weights (do this first)
+
+The `bge-small-en-v1.5` weights are **not in this repo** — `model.safetensors` is 127MB, over GitHub's
+100MB per-file hard limit, so `models/` is gitignored. Both `pipeline/embed_index.py:build_dense_index`
+and `pipeline/tokenizer_utils.py:_get_tokenizer` look for them at:
+
+```
+models/bge-small-en-v1.5/
+```
+
+Each silently falls back to a `BAAI/bge-small-en-v1.5` Hub download when that directory is missing, and
+**that fallback does not work here** — this environment's egress policy blocks `huggingface.co` (the
+proxy answers 403 to CONNECT). A missing-weights run therefore fails at `EmbedderUnavailable` rather
+than quietly producing a wrong index, which is the intended behaviour, but it means the weights have to
+be placed by hand before any dense-index build.
+
+The weights are mirrored in a **separate** repo, `Emtenan12/MNOO_`, under `bge-small-en-v1.5/`, with
+`model.safetensors` tracked by Git LFS.
+
+**A plain `git clone` of that repo does not get you the weights.** The clone succeeds, but the LFS
+smudge filter fails with `Resource not accessible by integration` and leaves a 134-byte pointer file in
+place of the model — and the failure aborts checkout partway, so several unrelated small files go
+missing too. `git lfs pull`, a direct POST to `github.com/.../info/lfs/objects/batch`, and
+`raw.githubusercontent.com` all hit the same wall: the first two return that same 403 (it is a GitHub
+App token permission limit, *not* the egress proxy), and `raw` serves the pointer rather than the
+object. This is the same App-permission wall that forced the original git-bundle workaround when this
+branch was first pushed.
+
+What does work is the LFS **media** endpoint, which the GitHub MCP connector will resolve for you
+(`get_file_contents` on the file returns the URL rather than the blob, since it is over the inline
+display limit):
+
+```
+https://media.githubusercontent.com/media/Emtenan12/MNOO_/<commit-sha>/bge-small-en-v1.5/model.safetensors
+```
+
+Procedure that works end to end:
+
+```
+apt-get install -y git-lfs && git lfs install --skip-repo   # not present in a stock image
+GIT_LFS_SKIP_SMUDGE=1 git clone --depth 1 https://github.com/Emtenan12/MNOO_ /workspace/mnoo_
+cp -r /workspace/mnoo_/bge-small-en-v1.5/. models/bge-small-en-v1.5/
+curl -sSL -o models/bge-small-en-v1.5/model.safetensors "<media URL above>"
+```
+
+`GIT_LFS_SKIP_SMUDGE=1` is the important part — it stops the smudge failure from aborting checkout, so
+the eight small config/tokenizer files land correctly and only the safetensors needs fetching
+separately.
+
+**Verify before building.** The failure mode this guards against is a pointer file masquerading as
+weights, which is ~134 bytes of text and will not announce itself:
+
+```
+sha256sum models/bge-small-en-v1.5/model.safetensors
+# ea1d11a3f23d14fe09fc1826fc7944e89c09a634d2217d57a21dd136805ee3e8   (133,462,128 bytes)
+```
+
+That hash is the LFS pointer's own `oid`, so matching it confirms the object is complete and
+uncorrupted, not merely large.
+
+Two upstream files, `vocab.txt` and `special_tokens_map.json`, are **absent** from the `MNOO_` mirror.
+Nothing currently breaks: `tokenizer.json` is a self-contained fast tokenizer and carries the vocab.
+Anything routed to the slow tokenizer path would fail, so add them if that ever becomes a code path.
+
 ## Artifact patterns
 
 ### 1. Mid-sentence page-break corruption (confirmed, present in every extractor tested)
@@ -152,14 +216,16 @@ check on every new document/tool, since it's a per-tool behavior, not a guarante
   this environment's egress policy blocks direct `huggingface.co` connections (403). Also pulls 5.7GB of
   dependencies (2.7GB pure CUDA/nvidia libraries) irrelevant to a CPU-only ARM deployment target
   regardless. See `eval/extraction_eval.md`.
-- **Embedding model weight files could not be downloaded in this sandbox**, for any of the 4 candidates
-  evaluated, including the chosen `all-MiniLM-L6-v2`. Same `huggingface.co` egress block, plus the
-  sanctioned `hf_fs` MCP connector has a hard, override-less refusal on binary files (`.safetensors`,
-  `.onnx`, `.bin`). `pipeline/embed_index.py:build_dense_index` fails cleanly with a clear
-  `EmbedderUnavailable` error and logs it rather than crashing — BM25 + `chunk_lookup.pkl` still build
-  successfully, since they don't need the embedder. **The dense ChromaDB index (`doctrine_chunks_v2`)
-  still needs to be built** in an environment with working HF Hub access (e.g. the HF Space's own
-  deploy environment, which already has this) before this can replace the live retrieval index.
+- **Embedding model weight files cannot be downloaded from `huggingface.co` in this sandbox**, for any
+  of the 4 candidates evaluated. Same egress block as `docling` above, plus the sanctioned `hf_fs` MCP
+  connector has a hard, override-less refusal on binary files (`.safetensors`, `.onnx`, `.bin`).
+  `pipeline/embed_index.py:build_dense_index` fails cleanly with a clear `EmbedderUnavailable` error and
+  logs it rather than crashing — BM25 + `chunk_lookup.pkl` still build successfully, since they don't
+  need the embedder. **This is now worked around rather than merely documented**: the weights are
+  mirrored in `Emtenan12/MNOO_` and fetched via the LFS media endpoint — see *Fetching the embedding
+  model weights* above for the exact procedure and the verification hash. The dense index builds here
+  in ~5min on CPU with no HF Hub access at all, so it no longer has to wait on the HF Space's deploy
+  environment.
 - **Google Drive's `download_file_content` has a hard 10MB-per-file cap** (explicit error message,
   confirmed on `ADP-7-0.pdf`, 11.29MB) and additionally fails intermittently-but-persistently
   ("MCP server session expired") on some files well under that cap — `ADP_5-0.pdf` (6.99MB) failed
@@ -239,7 +305,7 @@ against the real source text before concluding the pipeline is broken.
 | Documents indexed | **15 of 16** ADP publications |
 | Chunks | **4,032** |
 | Embedding model | `BAAI/bge-small-en-v1.5`, 384-dim, `max_seq_length` **512** (verified by loading the model, not assumed) |
-| Dense index | ChromaDB `doctrine_chunks_v2`, cosine — built, 4,032 vectors (3m11s, CPU) |
+| Dense index | ChromaDB `doctrine_chunks_v2`, cosine — built, 4,032 vectors, 384-dim (3m11s original build; 4m48s on a later rebuild, CPU) |
 | Sparse index | BM25Okapi + `chunk_lookup.pkl`, tokenizer copied verbatim from `hybrid_retrieval.py` |
 | Validation | 21 passed, 2 failed (both the same known-bad source file), 0 skipped |
 | Replacement chars | **0** corpus-wide |
@@ -249,10 +315,21 @@ Embedding dimension is 384, unchanged from `all-MiniLM-L6-v2`, so **no `doctrine
 migration is needed** — confirmed by loading the model, not inferred.
 
 Retrieval spot-check against the live dense index returns the correct chunk at rank 1 for
-"seven steps of the military decision-making process" (ADP_5-0), "principles of mission command"
-(ADP_6-0), and "intelligence warfighting function" (ADP_3-0). Note that bge models expect the
-instruction prefix `"Represent this sentence for searching relevant passages: "` on the **query**
-side only — passages are embedded bare, as done here.
+"seven steps of the military decision-making process" (ADP_5-0__000125), "principles of mission
+command" (ADP_6-0__000022), and "intelligence warfighting function" (ADP_3-0__000061). Note that bge
+models expect the instruction prefix `"Represent this sentence for searching relevant passages: "` on
+the **query** side only — passages are embedded bare, as done here. Re-checked on a later rebuild:
+all three still rank 1, and the prefix makes **no** difference to rank on these three (identical top-5
+ordering with and without it) — so the prefix is worth keeping for correctness, but do not read a
+rank-1 hit as evidence that it is being applied. Phrasing does matter more than the prefix: wrapping
+the first query as a natural question ("What are the seven steps of…?") drops ADP_5-0__000125 to rank
+2 behind an ADP_3-37 chunk. That is a hint that question-form queries deserve their own eval, not a
+defect.
+
+The rebuild is **deterministic**: rerunning `build_all_indexes()` on the same JSONL reproduced
+`bm25_index.pkl` and `chunk_lookup.pkl` byte-identical to the committed copies (SHA256-matched). A
+differing sparse index after a rebuild therefore means the corpus or the tokenizer changed, and is
+worth investigating rather than shrugging off.
 
 ## Known gaps / next steps for whoever picks this up
 
