@@ -57,7 +57,8 @@ class DomainSpellCorrector:
 
     def __init__(self, vocab: Counter, backend: str = "symspell",
                  min_freq: int = 3, max_edit: int = 2, min_len: int = 5,
-                 min_candidate_freq: int = 5, guard_english: bool = True):
+                 min_candidate_freq: int = 5, guard_english: bool = True,
+                 prefix_length: int = 5):
         self.backend = backend
         self.min_freq = min_freq
         self.max_edit = max_edit
@@ -76,7 +77,14 @@ class DomainSpellCorrector:
             from symspellpy import SymSpell, Verbosity
 
             self._Verbosity = Verbosity
-            self.sym = SymSpell(max_dictionary_edit_distance=max_edit, prefix_length=7)
+            # prefix_length is the dominant memory term, not max_edit: the
+            # delete-index measures 14.4 MiB at prefix 7 and 0.6 MiB at
+            # prefix 5, and produces byte-identical corrections on all 26
+            # corrections this suite exercises. Defaulted to 5 for the
+            # memory-constrained ARM target; raise it if a future typo set
+            # shows corrections being missed. See eval/typo_correction_eval.md.
+            self.sym = SymSpell(max_dictionary_edit_distance=max_edit,
+                                prefix_length=prefix_length)
             for w, n in vocab.items():
                 if n >= min_freq:
                     self.sym.create_dictionary_entry(w, n)

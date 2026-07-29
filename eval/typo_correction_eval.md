@@ -123,7 +123,82 @@ string once, before it reaches either retriever, and (recommended) logging
 the edit list so corrections stay auditable.
 
 Cost: vocabulary build is ~1s over 4,032 chunks; the SymSpell index is
-built once at startup. Correction itself is sub-millisecond per query. Both
-are acceptable for the ARM deployment target, but the SymSpell delete-index
-carries a memory cost that should be measured on-device before assuming it
-fits alongside the model and vector store.
+built once at startup. Correction itself is sub-millisecond per query.
+
+## Measured memory footprint
+
+Measured as RSS deltas in an isolated process (`/proc/self/status` VmRSS,
+`gc.collect()` between stages), not estimated from the vocabulary file size.
+
+| stage | RSS | delta |
+|---|---|---|
+| interpreter + imports | 9.9 MiB | — |
+| + corpus chunks (build-time only) | 21.8 MiB | +11.8 |
+| + vocabulary Counter (13,292 terms) | 23.4 MiB | +1.5 |
+| + English guard set (82,834 terms) | 30.1 MiB | +6.8 |
+| + SymSpell corrector (prefix 5) | 36.0 MiB | +5.9 |
+| peak RSS (`ru_maxrss`) | **36.0 MiB** | |
+
+The concern that prompted this was correct: the delete-index is far larger
+than its source dictionary. At the original `prefix_length=7` the index
+measured **14.4 MiB from a vocabulary occupying 1.5 MiB — roughly 14x**,
+and process peak was 51.3 MiB.
+
+### prefix_length is the dominant term, and reducing it is free here
+
+| max_edit | prefix_length | index size | build | delete entries |
+|---|---|---|---|---|
+| 1 | 7 | 2.8 MiB | 0.04s | 32,903 |
+| 2 | 7 | 14.4 MiB | 0.16s | 87,435 |
+| **2** | **5** | **0.6 MiB** | **0.07s** | **20,163** |
+| 3 | 7 | 21.2 MiB | 0.33s | 123,776 |
+
+`prefix_length=5` is a **24x** reduction over `prefix_length=7`, and it is
+not a quality trade on this corpus: all three of the configurations above
+produce **byte-identical corrections** on all 26 corrections the suite
+exercises, and a full 91-case re-run at prefix 5 differs from prefix 7 by
+**0 rank changes across all three retrievers**. The default is therefore 5.
+
+Caveat on that: the suite has 20 typo queries. They all happen to be
+recoverable within a 5-character prefix. A typo distribution with errors
+concentrated later in longer words could behave differently, so the
+parameter is exposed rather than hard-coded.
+
+Two consequences worth noting:
+
+- **The English guard set is now the largest component** at 6.8 MiB, over
+  10x the delete-index. If memory ever needs trimming, that list is the
+  place to look, not SymSpell.
+- **The 11.8 MiB of corpus chunks is build-time only.** A deployment would
+  ship a precomputed vocabulary rather than re-derive it from the JSONL,
+  removing that from the runtime footprint entirely.
+
+### What this does and does not tell us about the target
+
+Measured on **x86_64, 4 cores, CPython 3.11** — not on the target board.
+
+Transfers reasonably: Cortex-A53 in the ARMv8-A/AArch64 configuration is
+also 64-bit, so CPython's per-object and per-dict-entry overhead — which is
+essentially all of this footprint, since these are Python dicts and sets —
+should be within a few percent. The structures are pointer-heavy, and
+pointer width is the thing that matters most.
+
+Does **not** transfer, and must be checked on-device:
+
+- **32-bit userland.** If the board runs armhf rather than AArch64, pointer
+  size halves and these numbers drop substantially — the measurement would
+  be conservative rather than wrong.
+- **Page size.** AArch64 kernels may use 16 KiB or 64 KiB pages against
+  x86_64's 4 KiB, which inflates RSS by rounding.
+- **Allocator.** glibc vs musl differ in arena behaviour and in how
+  aggressively freed memory is returned.
+- **Contention.** This measures the corrector alone in a clean process. It
+  says nothing about behaviour alongside the ~1.2 GB Qwen2.5-1.5B GGUF, the
+  embedder, and the vector store competing for the same DDR4.
+
+For scale: ~26 MiB of feature footprint against a claimed 4 GB PS DDR4 is
+well under 1%, and ~2% of the generative model alone. That margin is wide
+enough that the ordering of the caveats above is unlikely to change the
+decision — but the 4 GB figure is itself listed as unverified in the
+project's reference notes, so this remains a rough sizing rather than a
+fit-check.
