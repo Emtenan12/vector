@@ -237,12 +237,20 @@ def main():
     ap.add_argument("--k", type=int, default=10)
     ap.add_argument("--out-json", type=Path, default=None)
     ap.add_argument("--out-md", type=Path, default=None)
+    ap.add_argument("--correct", choices=["none", "symspell", "rapidfuzz"], default="none",
+                    help="Query-side spell correction applied before ALL retrievers.")
     args = ap.parse_args()
 
     chunks = [json.loads(l) for l in args.jsonl.open(encoding="utf-8") if l.strip()]
     para_map = build_para_map(chunks)
     suite = load_suite(args.xlsx)
     R = Retrievers(args.index_dir, args.model_dir)
+
+    corrector = None
+    if args.correct != "none":
+        from pipeline.query_correct import DomainSpellCorrector, build_vocab
+
+        corrector = DomainSpellCorrector(build_vocab(chunks), backend=args.correct)
 
     results = []
     unresolved = []
@@ -256,8 +264,15 @@ def main():
             query = extract_trap_query(vtext) if vname == "trap" else vtext
             if not query:
                 continue
+            raw_query = query
+            edits: list[tuple[str, str]] = []
+            if corrector is not None:
+                query, edits = corrector.correct(query)
+
             row = {
-                "id": q["id"], "variant": vname, "query": query,
+                "id": q["id"], "variant": vname, "query": raw_query,
+                "corrected_query": query if edits else None,
+                "edits": edits,
                 "category": q["category"], "anchor": q["anchor"],
                 "gold_n": len(gold), "resolved": bool(gold),
             }
