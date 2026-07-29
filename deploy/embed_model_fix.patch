@@ -1,0 +1,74 @@
+Staged change for hf.co/spaces/Emtenan/LIMA_RAFT :: hybrid_retrieval.py
+NOT APPLIED TO THE LIVE SPACE. Apply together with the index swap.
+
+WHY
+The indexes on this branch are built with BAAI/bge-small-en-v1.5. The Space
+embeds queries with all-MiniLM-L6-v2. Both are 384-dimensional, so Chroma
+accepts the query without error and returns confidently-ranked nonsense:
+MiniLM query vectors compared against bge passage vectors. There is no
+exception, no dimension mismatch, and no log line. Swapping the indexes
+without this change is the silent-failure case.
+
+RESOLUTION ORDER
+Mirrors pipeline/embed_index.py and pipeline/tokenizer_utils.py: prefer the
+local weights directory, fall back to the hub id. The Space must therefore
+ship models/bge-small-en-v1.5/ alongside the indexes (or set LIMA_EMBED_MODEL),
+otherwise the fallback silently re-downloads a DIFFERENT model and
+reintroduces exactly the bug this fixes -- see the assertion note below.
+
+--- a/hybrid_retrieval.py
++++ b/hybrid_retrieval.py
+@@
+-EMBED_MODEL = 'all-MiniLM-L6-v2'
++# Must match the model the indexes were BUILT with. bge-small-en-v1.5 and
++# all-MiniLM-L6-v2 are both 384-dim, so a mismatch does not raise -- it
++# silently degrades retrieval. Resolution mirrors pipeline/embed_index.py:
++# local weights first, hub id only as a fallback.
++_EMBED_MODEL_NAME = 'bge-small-en-v1.5'
++_LOCAL_EMBED_PATH = BASE_DIR / 'models' / _EMBED_MODEL_NAME
++EMBED_MODEL = os.environ.get(
++    'LIMA_EMBED_MODEL',
++    str(_LOCAL_EMBED_PATH) if _LOCAL_EMBED_PATH.exists() else f'BAAI/{_EMBED_MODEL_NAME}',
++)
++
++# bge models expect an instruction prefix on the QUERY side only; passages
++# are embedded bare, which is how the indexes on this branch were built.
++BGE_QUERY_PREFIX = 'Represent this sentence for searching relevant passages: '
+
+(requires `import os` at module top -- the file does not currently import it)
+
+--- a/hybrid_retrieval.py
++++ b/hybrid_retrieval.py
+@@ class HybridRetriever._dense_search
+-    def _dense_search(self, query: str, n: int = 20) -> list[str]:
+-        embedding = self._embedder.encode(query).tolist()
++    def _dense_search(self, query: str, n: int = 20) -> list[str]:
++        # Query-side prefix, matching how the index was built.
++        embedding = self._embedder.encode(BGE_QUERY_PREFIX + query).tolist()
+
+--- a/hybrid_retrieval.py
++++ b/hybrid_retrieval.py
+@@ class HybridRetriever.load
+     embedder = SentenceTransformer(EMBED_MODEL, device='cpu')
++    # Fail loudly on the one error this whole change exists to prevent.
++    # 512 is bge-small-en-v1.5; all-MiniLM-L6-v2 is 256. Both are 384-dim,
++    # so dimension alone cannot distinguish them.
++    if embedder.get_sentence_embedding_dimension() != 384:
++        raise RuntimeError(
++            f'embedder dim {embedder.get_sentence_embedding_dimension()} != 384; '
++            f'indexes are 384-dim'
++        )
++    if embedder.max_seq_length != 512:
++        raise RuntimeError(
++            f'embedder max_seq_length={embedder.max_seq_length}, expected 512 for '
++            f'{_EMBED_MODEL_NAME}. A 256 value means all-MiniLM-L6-v2 loaded '
++            f'instead -- same dimension, different vector space, silently wrong '
++            f'retrieval against bge-built indexes.'
++        )
+     reranker = CrossEncoder(RERANK_MODEL, device='cpu')
+
+NOTE ON THE ASSERTION
+max_seq_length is the discriminator that dimension cannot provide. It turns
+the silent failure into a startup crash, which is the correct trade: a Space
+that refuses to boot is recoverable, a Space serving plausible wrong doctrine
+is not.
