@@ -24,3 +24,24 @@ models/
 # every rebuild. Regenerate with pipeline/embed_index.py rather than
 # versioning it -- the chunk JSONL it is built from IS committed.
 data/indexes/chroma_db/
+
+# Agent-tooling scratch, not pipeline deliverables.
+#
+# .claude/settings.local.json is local-only by convention (that is what the
+# ".local" suffix means) and here it holds absolute paths carrying a session
+# UUID and /tmp scratchpad locations -- committing it would bake one
+# session's machine state into the repo and it would be wrong for every
+# other checkout.
+#
+# .claude/skills/ is a symlink farm pointing into .agents/.
+#
+# .agents/ + skills-lock.json are the `npx skills` install of the
+# third-party find-skills meta-skill. Deliberately NOT vendored: its core
+# command (`npx skills find`) queries skills.sh, which this environment's
+# egress policy blocks, so the skill cannot perform its one function from
+# here -- committing it would persist something non-functional into a
+# doctrine-pipeline repo. Reinstall per session if wanted:
+#   npx skills add https://github.com/vercel-labs/skills --skill find-skills
+.claude/
+.agents/
+skills-lock.json
