@@ -1,0 +1,821 @@
+[
+ {
+  "id": "1",
+  "variant": "primary",
+  "query": "What are the warfighting functions?",
+  "top1_dist": 0.11175084114074707,
+  "gold_dist": 0.11175084114074707,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "1",
+  "variant": "paraphrase",
+  "query": "Name the functions that generate combat power.",
+  "top1_dist": 0.15518510341644287,
+  "gold_dist": 0.2229764461517334,
+  "gold_rank": 7,
+  "hit": true
+ },
+ {
+  "id": "1",
+  "variant": "casual",
+  "query": "what r the warfighting functions",
+  "top1_dist": 0.11028778553009033,
+  "gold_dist": 0.11028778553009033,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "1",
+  "variant": "typo",
+  "query": "list the warfighting functions",
+  "top1_dist": 0.15334618091583252,
+  "gold_dist": 0.15905547142028809,
+  "gold_rank": 4,
+  "hit": true
+ },
+ {
+  "id": "1",
+  "variant": "trap",
+  "query": "What are the seven warfighting functions?",
+  "top1_dist": 0.15560853481292725,
+  "gold_dist": 0.15560853481292725,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "2",
+  "variant": "primary",
+  "query": "What are the dynamics of combat power?",
+  "top1_dist": 0.1759154200553894,
+  "gold_dist": null,
+  "gold_rank": null,
+  "hit": false
+ },
+ {
+  "id": "2",
+  "variant": "paraphrase",
+  "query": "Which five variables determine the force of a formation's blows in combat?",
+  "top1_dist": 0.2780541181564331,
+  "gold_dist": null,
+  "gold_rank": null,
+  "hit": false
+ },
+ {
+  "id": "2",
+  "variant": "casual",
+  "query": "combat power dynamics \u2014 whats the list",
+  "top1_dist": 0.21106421947479248,
+  "gold_dist": null,
+  "gold_rank": null,
+  "hit": false
+ },
+ {
+  "id": "2",
+  "variant": "typo",
+  "query": "what are the dynamics of combat power",
+  "top1_dist": 0.16649842262268066,
+  "gold_dist": null,
+  "gold_rank": null,
+  "hit": false
+ },
+ {
+  "id": "2",
+  "variant": "trap",
+  "query": "What are the eight elements of combat power?",
+  "top1_dist": 0.15148234367370605,
+  "gold_dist": null,
+  "gold_rank": null,
+  "hit": false
+ },
+ {
+  "id": "3",
+  "variant": "primary",
+  "query": "What are the tenets of multidomain operations?",
+  "top1_dist": 0.19350343942642212,
+  "gold_dist": 0.26941967010498047,
+  "gold_rank": 8,
+  "hit": true
+ },
+ {
+  "id": "3",
+  "variant": "paraphrase",
+  "query": "Which desirable attributes should be incorporated into all Army plans and operations?",
+  "top1_dist": 0.19847893714904785,
+  "gold_dist": null,
+  "gold_rank": null,
+  "hit": false
+ },
+ {
+  "id": "3",
+  "variant": "casual",
+  "query": "MDO tenets?",
+  "top1_dist": 0.30781495571136475,
+  "gold_dist": null,
+  "gold_rank": null,
+  "hit": false
+ },
+ {
+  "id": "3",
+  "variant": "typo",
+  "query": "tenets of multidomain operations",
+  "top1_dist": 0.14127707481384277,
+  "gold_dist": 0.2733718156814575,
+  "gold_rank": 7,
+  "hit": true
+ },
+ {
+  "id": "3",
+  "variant": "trap",
+  "query": "What are the tenets of unified land operations?",
+  "top1_dist": 0.1222374439239502,
+  "gold_dist": null,
+  "gold_rank": null,
+  "hit": false
+ },
+ {
+  "id": "4",
+  "variant": "primary",
+  "query": "What are the levels of warfare?",
+  "top1_dist": 0.1613781452178955,
+  "gold_dist": 0.16850364208221436,
+  "gold_rank": 2,
+  "hit": true
+ },
+ {
+  "id": "4",
+  "variant": "paraphrase",
+  "query": "How does the Army organize its activities across levels of warfare, and what are they?",
+  "top1_dist": 0.19516772031784058,
+  "gold_dist": 0.19516772031784058,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "4",
+  "variant": "casual",
+  "query": "levels of warfare... how many n what are they",
+  "top1_dist": 0.19399189949035645,
+  "gold_dist": 0.19399189949035645,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "4",
+  "variant": "typo",
+  "query": "list the levels of warfare",
+  "top1_dist": 0.19592761993408203,
+  "gold_dist": 0.19592761993408203,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "4",
+  "variant": "trap",
+  "query": "What are the three levels of warfare?",
+  "top1_dist": 0.1804203987121582,
+  "gold_dist": 0.1969592571258545,
+  "gold_rank": 3,
+  "hit": true
+ },
+ {
+  "id": "5",
+  "variant": "primary",
+  "query": "What are the principles of joint operations?",
+  "top1_dist": 0.14160829782485962,
+  "gold_dist": null,
+  "gold_rank": null,
+  "hit": false
+ },
+ {
+  "id": "5",
+  "variant": "paraphrase",
+  "query": "List the nine principles of war and the three additional joint principles.",
+  "top1_dist": 0.2748965620994568,
+  "gold_dist": null,
+  "gold_rank": null,
+  "hit": false
+ },
+ {
+  "id": "5",
+  "variant": "casual",
+  "query": "principles of war \u2014 gimme the list",
+  "top1_dist": 0.2696472406387329,
+  "gold_dist": null,
+  "gold_rank": null,
+  "hit": false
+ },
+ {
+  "id": "5",
+  "variant": "typo",
+  "query": "list the principles of war",
+  "top1_dist": 0.23049265146255493,
+  "gold_dist": null,
+  "gold_rank": null,
+  "hit": false
+ },
+ {
+  "id": "5",
+  "variant": "trap",
+  "query": "The principles of war aren't in Army doctrine, right?",
+  "top1_dist": 0.21936535835266113,
+  "gold_dist": null,
+  "gold_rank": null,
+  "hit": false
+ },
+ {
+  "id": "6",
+  "variant": "primary",
+  "query": "What is mission command?",
+  "top1_dist": 0.14169716835021973,
+  "gold_dist": null,
+  "gold_rank": null,
+  "hit": false
+ },
+ {
+  "id": "6",
+  "variant": "paraphrase",
+  "query": "How does Army doctrine define the Army's approach to command and control?",
+  "top1_dist": 0.17117226123809814,
+  "gold_dist": 0.17117226123809814,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "6",
+  "variant": "casual",
+  "query": "define mission command real quick",
+  "top1_dist": 0.2174699306488037,
+  "gold_dist": null,
+  "gold_rank": null,
+  "hit": false
+ },
+ {
+  "id": "6",
+  "variant": "typo",
+  "query": "what is mission command",
+  "top1_dist": 0.14117568731307983,
+  "gold_dist": null,
+  "gold_rank": null,
+  "hit": false
+ },
+ {
+  "id": "7",
+  "variant": "primary",
+  "query": "What are the principles of mission command?",
+  "top1_dist": 0.11085796356201172,
+  "gold_dist": 0.11085796356201172,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "7",
+  "variant": "paraphrase",
+  "query": "Which seven principles enable successful mission command?",
+  "top1_dist": 0.15390539169311523,
+  "gold_dist": 0.15390539169311523,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "7",
+  "variant": "casual",
+  "query": "mission command principles pls",
+  "top1_dist": 0.12928086519241333,
+  "gold_dist": 0.12928086519241333,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "7",
+  "variant": "typo",
+  "query": "principles of mission command",
+  "top1_dist": 0.08829271793365479,
+  "gold_dist": 0.08829271793365479,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "7",
+  "variant": "trap",
+  "query": "Are trust and initiative the only two principles of mission command?",
+  "top1_dist": 0.23485291004180908,
+  "gold_dist": 0.23485291004180908,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "8",
+  "variant": "primary",
+  "query": "What is the commander's intent?",
+  "top1_dist": 0.14210307598114014,
+  "gold_dist": 0.14210307598114014,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "8",
+  "variant": "paraphrase",
+  "query": "What element of planning lets subordinates act to achieve desired results without further orders?",
+  "top1_dist": 0.23527193069458008,
+  "gold_dist": null,
+  "gold_rank": null,
+  "hit": false
+ },
+ {
+  "id": "8",
+  "variant": "casual",
+  "query": "commanders intent \u2014 define it",
+  "top1_dist": 0.1635228395462036,
+  "gold_dist": 0.16744327545166016,
+  "gold_rank": 3,
+  "hit": true
+ },
+ {
+  "id": "8",
+  "variant": "typo",
+  "query": "whats the commanders intent",
+  "top1_dist": 0.15001100301742554,
+  "gold_dist": 0.15485215187072754,
+  "gold_rank": 2,
+  "hit": true
+ },
+ {
+  "id": "9",
+  "variant": "primary",
+  "query": "What is mutual trust?",
+  "top1_dist": 0.2510148286819458,
+  "gold_dist": 0.2510148286819458,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "9",
+  "variant": "paraphrase",
+  "query": "How does ADP 6-0 define the shared confidence between commanders and subordinates?",
+  "top1_dist": 0.2197483777999878,
+  "gold_dist": null,
+  "gold_rank": null,
+  "hit": false
+ },
+ {
+  "id": "9",
+  "variant": "casual",
+  "query": "define mutual trust (army doctrine)",
+  "top1_dist": 0.18790102005004883,
+  "gold_dist": 0.18790102005004883,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "9",
+  "variant": "typo",
+  "query": "what is mutual trust in mission command",
+  "top1_dist": 0.11578106880187988,
+  "gold_dist": 0.17123037576675415,
+  "gold_rank": 2,
+  "hit": true
+ },
+ {
+  "id": "10",
+  "variant": "primary",
+  "query": "What are the seven steps of the military decision-making process (MDMP)?",
+  "top1_dist": 0.12126624584197998,
+  "gold_dist": 0.12126624584197998,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "10",
+  "variant": "paraphrase",
+  "query": "Walk me through the steps a staff uses to develop a plan under the MDMP.",
+  "top1_dist": 0.2573564052581787,
+  "gold_dist": 0.2573564052581787,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "10",
+  "variant": "casual",
+  "query": "mdmp steps?",
+  "top1_dist": 0.2503960132598877,
+  "gold_dist": 0.2503960132598877,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "10",
+  "variant": "typo",
+  "query": "what are teh steps of the MDPM",
+  "top1_dist": 0.25675785541534424,
+  "gold_dist": 0.25675785541534424,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "10",
+  "variant": "trap",
+  "query": "What are the ten steps of MDMP?",
+  "top1_dist": 0.27635061740875244,
+  "gold_dist": 0.27635061740875244,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "11",
+  "variant": "primary",
+  "query": "What are the eight steps of troop leading procedures (TLP)?",
+  "top1_dist": 0.14471435546875,
+  "gold_dist": 0.14471435546875,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "11",
+  "variant": "paraphrase",
+  "query": "How do small-unit leaders without a staff plan and prepare for an operation?",
+  "top1_dist": 0.28310370445251465,
+  "gold_dist": 0.3070787191390991,
+  "gold_rank": 5,
+  "hit": true
+ },
+ {
+  "id": "11",
+  "variant": "casual",
+  "query": "TLP steps plz",
+  "top1_dist": 0.2770935297012329,
+  "gold_dist": 0.2770935297012329,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "11",
+  "variant": "typo",
+  "query": "steps of troop leading procedures",
+  "top1_dist": 0.14130419492721558,
+  "gold_dist": 0.18789887428283691,
+  "gold_rank": 3,
+  "hit": true
+ },
+ {
+  "id": "12",
+  "variant": "primary",
+  "query": "What is the operations process?",
+  "top1_dist": 0.12745678424835205,
+  "gold_dist": null,
+  "gold_rank": null,
+  "hit": false
+ },
+ {
+  "id": "12",
+  "variant": "paraphrase",
+  "query": "What are the major command and control activities performed during operations?",
+  "top1_dist": 0.1480887532234192,
+  "gold_dist": null,
+  "gold_rank": null,
+  "hit": false
+ },
+ {
+  "id": "12",
+  "variant": "casual",
+  "query": "ops process \u2014 what is it",
+  "top1_dist": 0.20579767227172852,
+  "gold_dist": null,
+  "gold_rank": null,
+  "hit": false
+ },
+ {
+  "id": "12",
+  "variant": "typo",
+  "query": "what is the operations process",
+  "top1_dist": 0.1271190643310547,
+  "gold_dist": null,
+  "gold_rank": null,
+  "hit": false
+ },
+ {
+  "id": "13",
+  "variant": "primary",
+  "query": "What are the steps of the Army intelligence process?",
+  "top1_dist": 0.2003180980682373,
+  "gold_dist": 0.21180546283721924,
+  "gold_rank": 2,
+  "hit": true
+ },
+ {
+  "id": "13",
+  "variant": "paraphrase",
+  "query": "Which steps and continuing activities make up the intelligence process?",
+  "top1_dist": 0.19121992588043213,
+  "gold_dist": 0.27155375480651855,
+  "gold_rank": 6,
+  "hit": true
+ },
+ {
+  "id": "13",
+  "variant": "casual",
+  "query": "intel process steps",
+  "top1_dist": 0.23801910877227783,
+  "gold_dist": 0.26430660486221313,
+  "gold_rank": 5,
+  "hit": true
+ },
+ {
+  "id": "13",
+  "variant": "typo",
+  "query": "steps of the intelligence process",
+  "top1_dist": 0.17653322219848633,
+  "gold_dist": 0.23555171489715576,
+  "gold_rank": 7,
+  "hit": true
+ },
+ {
+  "id": "13",
+  "variant": "trap",
+  "query": "Is IPOE the intelligence process?",
+  "top1_dist": 0.262729287147522,
+  "gold_dist": null,
+  "gold_rank": null,
+  "hit": false
+ },
+ {
+  "id": "14",
+  "variant": "primary",
+  "query": "What are the elements of sustainment?",
+  "top1_dist": 0.19634318351745605,
+  "gold_dist": 0.19634318351745605,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "14",
+  "variant": "paraphrase",
+  "query": "Which four elements make up the sustainment warfighting function?",
+  "top1_dist": 0.13108408451080322,
+  "gold_dist": 0.13108408451080322,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "14",
+  "variant": "casual",
+  "query": "sustainment WFF \u2014 what does it consist of",
+  "top1_dist": 0.26743096113204956,
+  "gold_dist": 0.27974408864974976,
+  "gold_rank": 2,
+  "hit": true
+ },
+ {
+  "id": "14",
+  "variant": "typo",
+  "query": "elements of sustainment",
+  "top1_dist": 0.19749748706817627,
+  "gold_dist": 0.20167112350463867,
+  "gold_rank": 3,
+  "hit": true
+ },
+ {
+  "id": "14",
+  "variant": "trap",
+  "query": "The sustainment function is just logistics, right?",
+  "top1_dist": 0.20254266262054443,
+  "gold_dist": 0.21154963970184326,
+  "gold_rank": 3,
+  "hit": true
+ },
+ {
+  "id": "15",
+  "variant": "primary",
+  "query": "What are the principles of sustainment?",
+  "top1_dist": 0.1426839828491211,
+  "gold_dist": 0.1426839828491211,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "15",
+  "variant": "paraphrase",
+  "query": "List the principles that are essential to maintaining combat power and providing endurance.",
+  "top1_dist": 0.17938107252120972,
+  "gold_dist": 0.17938107252120972,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "15",
+  "variant": "casual",
+  "query": "sustainment principles?",
+  "top1_dist": 0.14185559749603271,
+  "gold_dist": 0.14185559749603271,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "15",
+  "variant": "typo",
+  "query": "principles of sustainment",
+  "top1_dist": 0.138133704662323,
+  "gold_dist": 0.138133704662323,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "16",
+  "variant": "primary",
+  "query": "What are the characteristics of the defense?",
+  "top1_dist": 0.15476888418197632,
+  "gold_dist": 0.15476888418197632,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "16",
+  "variant": "paraphrase",
+  "query": "Which characteristics do defending commanders use to regain the initiative?",
+  "top1_dist": 0.1315016746520996,
+  "gold_dist": 0.1315016746520996,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "16",
+  "variant": "casual",
+  "query": "defense characteristics \u2014 list em",
+  "top1_dist": 0.2244437336921692,
+  "gold_dist": 0.2244437336921692,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "16",
+  "variant": "typo",
+  "query": "characteristics of the defence",
+  "top1_dist": 0.17826062440872192,
+  "gold_dist": 0.17826062440872192,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "16",
+  "variant": "trap",
+  "query": "What are the five characteristics of the defense?",
+  "top1_dist": 0.18747937679290771,
+  "gold_dist": 0.18747937679290771,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "17",
+  "variant": "primary",
+  "query": "What are the three types of defensive operations?",
+  "top1_dist": 0.12305796146392822,
+  "gold_dist": 0.12305796146392822,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "17",
+  "variant": "paraphrase",
+  "query": "Which defensive operation focuses on terrain, which on enemy movement, and which on friendly movement?",
+  "top1_dist": 0.20938462018966675,
+  "gold_dist": 0.20938462018966675,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "17",
+  "variant": "casual",
+  "query": "types of defensive ops?",
+  "top1_dist": 0.16862595081329346,
+  "gold_dist": 0.16862595081329346,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "17",
+  "variant": "typo",
+  "query": "3 types of defense operations",
+  "top1_dist": 0.13346624374389648,
+  "gold_dist": 0.13346624374389648,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "18",
+  "variant": "primary",
+  "query": "What are the five forms of maneuver?",
+  "top1_dist": 0.22536611557006836,
+  "gold_dist": 0.23498690128326416,
+  "gold_rank": 2,
+  "hit": true
+ },
+ {
+  "id": "18",
+  "variant": "paraphrase",
+  "query": "Which distinct tactical combinations of fire and movement does the Army recognize?",
+  "top1_dist": 0.24608683586120605,
+  "gold_dist": null,
+  "gold_rank": null,
+  "hit": false
+ },
+ {
+  "id": "18",
+  "variant": "casual",
+  "query": "forms of maneuver \u2014 how many and what",
+  "top1_dist": 0.20786356925964355,
+  "gold_dist": 0.20786356925964355,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "18",
+  "variant": "typo",
+  "query": "five forms of maneuver",
+  "top1_dist": 0.21604645252227783,
+  "gold_dist": 0.21935826539993286,
+  "gold_rank": 2,
+  "hit": true
+ },
+ {
+  "id": "19",
+  "variant": "primary",
+  "query": "What is a mobile defense, and what is the striking force?",
+  "top1_dist": 0.13750147819519043,
+  "gold_dist": 0.14537501335144043,
+  "gold_rank": 2,
+  "hit": true
+ },
+ {
+  "id": "19",
+  "variant": "paraphrase",
+  "query": "In which defensive operation does a striking force deliver the decisive counterattack?",
+  "top1_dist": 0.2210538387298584,
+  "gold_dist": 0.2210538387298584,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "19",
+  "variant": "casual",
+  "query": "explain mobile defense + striking force",
+  "top1_dist": 0.12968605756759644,
+  "gold_dist": 0.12968605756759644,
+  "gold_rank": 1,
+  "hit": true
+ },
+ {
+  "id": "19",
+  "variant": "typo",
+  "query": "what is a mobile defense",
+  "top1_dist": 0.10948866605758667,
+  "gold_dist": 0.1910625696182251,
+  "gold_rank": 2,
+  "hit": true
+ },
+ {
+  "id": "20",
+  "variant": "primary",
+  "query": "Which publication and paragraph list the four elements of decisive action, and what are they?",
+  "top1_dist": 0.27504777908325195,
+  "gold_dist": 0.3226219415664673,
+  "gold_rank": 6,
+  "hit": true
+ },
+ {
+  "id": "20",
+  "variant": "paraphrase",
+  "query": "Where in the corpus is decisive action broken into its elements?",
+  "top1_dist": 0.25303471088409424,
+  "gold_dist": 0.27754443883895874,
+  "gold_rank": 6,
+  "hit": true
+ },
+ {
+  "id": "20",
+  "variant": "casual",
+  "query": "decisive action elements \u2014 which doc says it",
+  "top1_dist": 0.21473222970962524,
+  "gold_dist": 0.23926782608032227,
+  "gold_rank": 4,
+  "hit": true
+ },
+ {
+  "id": "20",
+  "variant": "typo",
+  "query": "four elements of decisive action + source",
+  "top1_dist": 0.2582075595855713,
+  "gold_dist": 0.2792510390281677,
+  "gold_rank": 7,
+  "hit": true
+ },
+ {
+  "id": "20",
+  "variant": "trap",
+  "query": "What does ADP 3-0 say about decisive action?",
+  "top1_dist": 0.15843504667282104,
+  "gold_dist": null,
+  "gold_rank": null,
+  "hit": false
+ }
+]
