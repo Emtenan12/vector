@@ -77,11 +77,18 @@ def main():
     stage3_dir.mkdir(parents=True, exist_ok=True)
     jsonl_path = stage3_dir / args.jsonl_name
 
+    summary_path = stage3_dir / (args.jsonl_name.replace(".jsonl", "") + "_report.json")
     all_reports = []
+    failures = []
     with jsonl_path.open("w", encoding="utf-8") as out_f:
         for pdf_path in pdfs:
             logger.info("Processing %s", pdf_path.name)
-            report = process_pdf(pdf_path, out_dir)
+            try:
+                report = process_pdf(pdf_path, out_dir)
+            except Exception:
+                logger.exception("FAILED processing %s -- skipping, continuing with the rest", pdf_path.name)
+                failures.append(pdf_path.name)
+                continue
             for chunk in report["chunks"]:
                 out_f.write(json.dumps({
                     "chunk_id": chunk.chunk_id,
@@ -90,6 +97,7 @@ def main():
                     "source_file": chunk.source_file,
                     "token_count": chunk.token_count,
                 }, ensure_ascii=False) + "\n")
+            out_f.flush()
             logger.info(
                 "  %s: %d chunks, preservation=%.1f%%, overflow=%d, "
                 "noise_removed=%d, rejoins=%d, toc_removed=%d, cid=%d, leaks=%d",
@@ -102,10 +110,15 @@ def main():
             report["chunks_count"] = len(report["chunks"])
             report.pop("chunks")  # keep the summary report light
             all_reports.append(report)
+            # Written after every document, not just at the end -- a crash on
+            # a later PDF must not discard the report for everything already
+            # processed (this run is long and unattended; a single bad file
+            # 150 documents in should cost one document, not the whole run).
+            summary_path.write_text(json.dumps(all_reports, indent=2), encoding="utf-8")
 
-    summary_path = stage3_dir / (args.jsonl_name.replace(".jsonl", "") + "_report.json")
-    summary_path.write_text(json.dumps(all_reports, indent=2), encoding="utf-8")
-    logger.info("Wrote %d chunks total to %s", sum(1 for _ in jsonl_path.open()), jsonl_path)
+    if failures:
+        logger.error("%d document(s) failed and were skipped: %s", len(failures), failures)
+    logger.info("Wrote %d chunks total to %s", sum(1 for _ in jsonl_path.open(encoding="utf-8")), jsonl_path)
     logger.info("Per-document report: %s", summary_path)
 
 
