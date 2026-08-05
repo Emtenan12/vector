@@ -86,7 +86,7 @@ def extract_trap_query(cell: str) -> str:
     return m.group(1).strip() if m else ""
 
 
-_DOC_RE = re.compile(r"\bAD[PR]\s+(\d+-\d+)\b")
+_DOC_RE = re.compile(r"\b(AD[PR]|ATP)\s+(\d+(?:\.\d+)?(?:-\d+(?:\.\d+)?)*)\b")
 
 # Paragraph markers are usually line-leading, but not always: an epigraph
 # attribution can run into the next paragraph on one line ("...William Joseph
@@ -110,7 +110,25 @@ def _para_ids_in(text: str) -> set[str]:
     return set(_PARA_MARKER_RE.findall(scrub))
 
 
-def parse_anchor(anchor: str) -> list[tuple[str, list[str]]]:
+def _resolve_doc_id(candidate: str, known_doc_ids: set[str] | None) -> str:
+    """candidate is a citation-derived id like 'ATP_2-01.3' or 'ADP_6-0'.
+
+    ADP doc_ids match the citation exactly, but ATP doc_ids in this corpus
+    carry an internal tracking suffix the citation never includes (e.g. the
+    document that self-cites as 'ATP 2-01.3' has doc_id 'ATP_2-01.3-003').
+    Resolve by boundary-safe prefix match: the character right after the
+    candidate in a real doc_id must be '-' or end-of-string, never '.' or a
+    digit -- otherwise 'ATP_4-0' would wrongly match 'ATP_4-0.6-001', a
+    different publication.
+    """
+    if not known_doc_ids or candidate in known_doc_ids:
+        return candidate
+    hits = [d for d in known_doc_ids
+            if d.startswith(candidate) and d[len(candidate):len(candidate) + 1] in ("", "-")]
+    return hits[0] if len(hits) == 1 else candidate
+
+
+def parse_anchor(anchor: str, known_doc_ids: set[str] | None = None) -> list[tuple[str, list[str]]]:
     """Return [(doc_id, [paragraph_id, ...]), ...] for an anchor cell.
 
     Segmented by document rather than crossed, because an anchor can name
@@ -119,7 +137,12 @@ def parse_anchor(anchor: str) -> list[tuple[str, list[str]]]:
     make ADP 3-0's para 1-14 -- a completely unrelated 'Levels of Warfare'
     passage that happens to share Q4's number -- count as gold for Q6.
     """
-    marks = [(m.start(), "ADP_" + m.group(1)) for m in _DOC_RE.finditer(anchor)]
+    marks = []
+    for m in _DOC_RE.finditer(anchor):
+        prefix, number = m.group(1), m.group(2)
+        base = "ADP" if prefix in ("ADP", "ADR") else prefix  # ADRP cites redesignate to ADP
+        candidate = f"{base}_{number}"
+        marks.append((m.start(), _resolve_doc_id(candidate, known_doc_ids)))
     if not marks:
         return []
     segments = []
@@ -169,10 +192,10 @@ CONTENT_ANCHORS = {
 }
 
 
-def resolve_gold(qid: str, case_anchor: str, para_map, chunks) -> tuple[set[str], list[str]]:
+def resolve_gold(qid: str, case_anchor: str, para_map, chunks, known_doc_ids=None) -> tuple[set[str], list[str]]:
     gold: set[str] = set()
     missing = []
-    for doc, paras in parse_anchor(case_anchor):
+    for doc, paras in parse_anchor(case_anchor, known_doc_ids):
         for p in paras:
             hit = para_map.get((doc, p))
             if hit:
@@ -243,6 +266,7 @@ def main():
 
     chunks = [json.loads(l) for l in args.jsonl.open(encoding="utf-8") if l.strip()]
     para_map = build_para_map(chunks)
+    known_doc_ids = {c["doc_id"] for c in chunks}
     suite = load_suite(args.xlsx)
     R = Retrievers(args.index_dir, args.model_dir)
 
@@ -255,7 +279,7 @@ def main():
     results = []
     unresolved = []
     for q in suite:
-        gold, missing = resolve_gold(q["id"], q["anchor"], para_map, chunks)
+        gold, missing = resolve_gold(q["id"], q["anchor"], para_map, chunks, known_doc_ids)
         if not gold:
             unresolved.append({"id": q["id"], "anchor": q["anchor"], "missing": missing})
         for vname, vtext in q["variants"].items():
